@@ -1,0 +1,4149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0b0c" />
+<meta name="description" content="WeRoad Weekend Varsavia · 19–21 giugno 2026 · programma, voli, mappa, contatti e checklist del gruppo" />
+<title>VARSAVIA · WeRoad Weekend · 19–21 Giugno 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   VARSAVIA · WeRoad · Brutalist Constructivist Edition
+   ========================================================= */
+
+:root{
+  --bg:        #0b0b0c;
+  --ink:       #f4f1ea;
+  --concrete:  #1a1a1c;
+  --concrete2: #232326;
+  --red:       #e8092a;
+  --red-deep:  #b8001f;
+  --cyan:      #00f0c2;
+  --yellow:    #ffd60a;
+  --line:      rgba(244,241,234,0.14);
+  --mono:      'Space Mono', monospace;
+  --display:   'Anton', sans-serif;
+  --headline:  'Syne', sans-serif;
+  --body:      'Barlow Condensed', sans-serif;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:auto; }
+
+body{
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  pointer-events:none;
+  z-index:9999;
+  opacity:.06;
+  mix-blend-mode: overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .85 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+::selection{ background:var(--red); color:var(--ink); }
+
+/* ----------- NAV ----------- */
+.nav{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(11,11,12,0.82);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 32px;
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.nav-brand{
+  display:flex; align-items:center; gap:10px;
+  font-weight:700;
+}
+.nav-brand .dot{
+  width:10px; height:10px; background:var(--red);
+  display:inline-block;
+}
+.nav-links{ display:flex; gap:18px; list-style:none; flex-wrap:wrap; }
+.nav-links a{
+  color: var(--ink); text-decoration:none;
+  position:relative; padding-bottom:4px;
+  transition: color .2s ease;
+}
+.nav-links a:hover{ color: var(--cyan); }
+.nav-links a::after{
+  content:""; position:absolute; left:0; bottom:0;
+  width:0; height:2px; background:var(--cyan);
+  transition: width .25s ease;
+}
+.nav-links a:hover::after{ width:100%; }
+
+.hamburger{
+  display:none;
+  flex-direction:column; gap:5px; cursor:pointer;
+  background:none; border:0; padding:6px;
+}
+.hamburger span{
+  width:24px; height:2px; background:var(--ink); display:block;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.hamburger.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 1100px){
+  .nav-links{
+    position: fixed; top: 56px; left:0; right:0;
+    flex-direction:column; gap:0;
+    background: var(--concrete);
+    border-bottom:1px solid var(--line);
+    transform: translateY(-110%);
+    transition: transform .3s ease;
+    padding: 8px 0 80px;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    visibility: hidden;
+  }
+  .nav-links.open{ visibility: visible; }
+  .nav-links.open{ transform: translateY(0); }
+  .nav-links li{ border-top:1px solid var(--line); }
+  .nav-links a{ display:block; padding:18px 32px; }
+  .nav-links a::after{ display:none; }
+  .hamburger{ display:flex; }
+}
+
+/* ----------- HERO ----------- */
+.hero{
+  position:relative;
+  min-height: 100vh;
+  padding: 110px 32px 60px;
+  display:grid;
+  grid-template-columns: 1fr;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg, var(--bg) 0%, #0e0e10 100%);
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-10%; right:-10%;
+  width: 60vw; height: 24px;
+  background: var(--red);
+  transform: rotate(-12deg);
+  z-index:1;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  bottom:6%; left:-6%;
+  width: 40vw; height: 6px;
+  background: var(--cyan);
+  transform: rotate(-12deg);
+  z-index:1;
+  box-shadow: 0 0 24px var(--cyan);
+}
+
+.hero-grid{
+  position:relative; z-index:2;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-self:center;
+  width:100%;
+  max-width:1400px;
+  margin: 0 auto;
+}
+
+.hero-meta{
+  display:flex; justify-content:space-between; align-items:center;
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color: rgba(244,241,234,0.65);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding: 14px 0;
+  flex-wrap:wrap; gap:8px;
+}
+.hero-meta .ping{
+  display:inline-flex; align-items:center; gap:8px;
+}
+.hero-meta .ping::before{
+  content:""; width:8px; height:8px; background:var(--cyan); border-radius:50%;
+  box-shadow: 0 0 8px var(--cyan);
+  animation: ping 1.6s ease-out infinite;
+}
+@keyframes ping{
+  0%{ transform:scale(1); opacity:1; }
+  70%{ transform:scale(2.2); opacity:0; }
+  100%{ transform:scale(1); opacity:0; }
+}
+
+.hero-title{
+  font-family: var(--display);
+  font-size: clamp(96px, 22vw, 340px);
+  line-height: .82;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  position: relative;
+}
+.hero-title .v-stack{
+  display: block;
+  position: relative;
+}
+.hero-title .v-stack .glitch{
+  display:inline-block;
+  color: var(--ink);
+}
+.hero-title .v-stack .shadow{
+  position:absolute;
+  left: 0.04em; top: 0.04em;
+  color: var(--red);
+  z-index:-1;
+  opacity: 0.85;
+}
+
+.hero-sub{
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap: 20px;
+  align-items:flex-end;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.hero-tagline{
+  font-family: var(--headline);
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 32px);
+  line-height: 1.15;
+  max-width: 560px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+.hero-tagline em{
+  font-style:normal;
+  background: var(--red);
+  padding: 0 6px;
+  color: var(--ink);
+}
+.hero-dates{
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  text-align: right;
+}
+.hero-dates strong{
+  display:block; font-size: 28px; font-weight:700; color: var(--yellow);
+  letter-spacing: .04em;
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  border-right: none;
+  margin-top: 8px;
+}
+.cd-cell{
+  border-right: 1px solid var(--line);
+  padding: 20px 16px;
+  background: var(--concrete);
+  position:relative;
+}
+.cd-cell:nth-child(odd){ background: #131316; }
+.cd-num{
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 88px);
+  line-height: .9;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  display:block;
+}
+.cd-label{
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  color: rgba(244,241,234,0.5);
+  margin-top: 8px;
+  display:block;
+}
+.cd-status{
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding: 14px 16px;
+  background: var(--red);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  display:flex; align-items:center; gap: 12px;
+  border-right: 1px solid var(--line);
+}
+.cd-status::before{
+  content:"●"; color: var(--ink); animation: blink 1.2s steps(2) infinite;
+}
+@keyframes blink{ 50%{ opacity:0; } }
+
+.marquee{
+  background: var(--red);
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 56px);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+.marquee-track{
+  display:inline-block;
+  padding-left: 100%;
+  animation: scroll 32s linear infinite;
+}
+.marquee span{ margin: 0 30px; }
+.marquee .star{ color: var(--yellow); }
+@keyframes scroll{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-100%); }
+}
+
+/* ----------- SECTION BASE ----------- */
+section{
+  position: relative;
+  padding: 100px 32px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 56px;
+}
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.section-head{
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items:end;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.section-num{
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: .2em;
+  color: var(--red);
+  font-weight: 700;
+}
+.section-title{
+  font-family: var(--display);
+  font-size: clamp(56px, 9vw, 148px);
+  line-height: .85;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.section-title .ac{ color: var(--cyan); }
+.section-title .yl{ color: var(--yellow); }
+.section-meta{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.55);
+  text-align:right;
+  white-space: nowrap;
+}
+@media (max-width: 700px){
+  .section-head{ grid-template-columns: 1fr; gap: 8px; }
+  .section-meta{ text-align:left; white-space: normal; }
+}
+
+/* ----------- PROGRAMMA / TABS ----------- */
+.programma{
+  background: linear-gradient(180deg, var(--bg) 0%, #0d0d10 100%);
+}
+.tabs{
+  display:flex;
+  gap: 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--ink);
+  flex-wrap: wrap;
+}
+.tab-btn{
+  flex: 1 1 200px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--line);
+  color: var(--ink);
+  padding: 24px 22px;
+  font-family: var(--display);
+  font-size: clamp(28px, 3.4vw, 44px);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: background .2s ease, color .2s ease;
+  line-height: 1;
+}
+.tab-btn:last-child{ border-right: none; }
+.tab-btn small{
+  display:block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .2em;
+  margin-bottom: 6px;
+  color: rgba(244,241,234,0.6);
+}
+.tab-btn:hover{ background: var(--concrete); }
+.tab-btn.active{ background: var(--red); color: var(--ink); }
+.tab-btn.active small{ color: rgba(255,255,255,0.85); }
+
+.tab-pane{ display:none; animation: fadeIn .35s ease; }
+.tab-pane.active{ display:block; }
+@keyframes fadeIn{ from{ opacity:0; transform: translateY(8px); } to{ opacity:1; transform:none; } }
+
+.day-grid{
+  display:grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+}
+@media (max-width: 800px){
+  .day-grid{ grid-template-columns: 1fr; }
+}
+
+.day-meta{
+  border-right: 1px solid var(--line);
+  padding-right: 24px;
+}
+.day-meta .badge{
+  display:inline-block;
+  background: var(--cyan);
+  color: var(--bg);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  margin-bottom: 18px;
+}
+.day-meta h3{
+  font-family: var(--display);
+  font-size: clamp(36px, 4vw, 60px);
+  line-height: .9;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  margin-bottom: 12px;
+}
+.day-meta p{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.55);
+}
+@media (max-width:800px){
+  .day-meta{ border-right:none; border-bottom:1px solid var(--line); padding: 0 0 24px 0; margin-bottom:24px; }
+}
+
+.timeline{ list-style:none; padding-left: 24px; }
+@media (max-width:800px){ .timeline{ padding-left:0; } }
+
+.tl-item{
+  position: relative;
+  padding: 0 0 30px 36px;
+  border-left: 1px dashed var(--line);
+  margin-left: 12px;
+}
+.tl-item:last-child{ border-left-color: transparent; }
+.tl-item::before{
+  content:"";
+  position: absolute;
+  left: -7px; top: 4px;
+  width: 13px; height: 13px;
+  background: var(--ink);
+  border: 2px solid var(--red);
+}
+.tl-item.warn::before{ background: var(--yellow); border-color: var(--yellow); }
+.tl-time{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  background: var(--concrete);
+  color: var(--yellow);
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+}
+.tl-title{
+  font-family: var(--headline);
+  font-weight: 700;
+  font-size: clamp(20px, 2.3vw, 28px);
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.tl-title .pin{ color: var(--red); }
+.tl-body{
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(244,241,234,0.86);
+  max-width: 720px;
+}
+.tl-body strong{ color: var(--cyan); font-weight: 700; }
+.tl-tag{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  background: var(--red);
+  color: var(--ink);
+  padding: 3px 8px;
+  margin-top: 10px;
+  margin-right: 6px;
+}
+.tl-tag.alt{ background: var(--concrete); color: var(--cyan); border:1px solid var(--cyan); }
+.tl-tag.warn{ background: var(--yellow); color: var(--bg); }
+
+/* ----------- VOLI ----------- */
+.voli{ background: #0c0c0e; }
+.voli-section{ margin-bottom: 48px; }
+.voli-section h3{
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 56px);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  line-height: .9;
+  margin-bottom: 20px;
+  display:flex; align-items:center; gap: 14px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 14px;
+}
+.voli-section h3 .arrow{
+  display:inline-flex; align-items:center; justify-content:center;
+  width: 38px; height: 38px;
+  background: var(--red);
+  color: var(--ink);
+  font-size: 22px;
+}
+.voli-section.dep h3 .arrow{ background: var(--cyan); color: var(--bg); }
+
+.flight-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+}
+.flight-card{
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  padding: 22px 22px 18px;
+  position: relative;
+  transition: transform .2s ease, background .2s ease;
+}
+.flight-card:hover{
+  transform: translate(-2px,-2px);
+  background: var(--concrete2);
+  box-shadow: 4px 4px 0 var(--red);
+}
+.flight-card .stamp{
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: var(--yellow);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--line);
+}
+.flight-card .stamp.dep{ color: var(--cyan); }
+.flight-route{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:end;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.flight-route .port{
+  font-family: var(--display);
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.flight-route .port small{
+  display:block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: rgba(244,241,234,0.5);
+  margin-top: 4px;
+}
+.flight-route .arrow-line{
+  font-family: var(--mono);
+  font-size: 22px;
+  color: var(--red);
+  padding-bottom: 6px;
+}
+.flight-meta{
+  display:flex; gap: 18px; flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.68);
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+.flight-meta b{ color: var(--ink); font-weight:700; }
+.flight-meta .pill{
+  background: var(--bg);
+  border:1px solid var(--line);
+  padding: 3px 8px;
+}
+.flight-pax{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  font-family: var(--body);
+  font-size: 15px;
+  color: rgba(244,241,234,0.85);
+}
+.flight-pax b{
+  display:block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--red);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.editable-note{
+  border-left: 4px solid var(--yellow);
+  background: rgba(255,214,10,0.06);
+  padding: 14px 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.75);
+  margin-bottom: 28px;
+}
+.editable-note b{ color: var(--yellow); }
+
+/* ----------- ROOMING ----------- */
+.rooming{ background: #0d0d10; }
+
+.tbd-banner{
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  border: 1px solid var(--yellow);
+  background: linear-gradient(90deg, rgba(255,214,10,0.10), rgba(255,214,10,0.02));
+  padding: 22px 26px;
+  margin-bottom: 32px;
+}
+.tbd-banner .tbd-mark{
+  font-family: var(--display);
+  font-size: 64px;
+  line-height: .8;
+  color: var(--yellow);
+}
+.tbd-banner .tbd-body h4{
+  font-family: var(--display);
+  font-size: clamp(24px, 2.6vw, 34px);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.tbd-banner .tbd-body p{
+  font-family: var(--body);
+  font-size: 16px;
+  color: rgba(244,241,234,0.85);
+  line-height: 1.45;
+}
+.tbd-banner .tbd-meta{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  white-space: nowrap;
+}
+@media (max-width: 720px){
+  .tbd-banner{ grid-template-columns: auto 1fr; }
+  .tbd-banner .tbd-meta{ grid-column: 1 / -1; text-align:left; }
+}
+
+.group-stats{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+.group-stat{
+  border-right: 1px solid var(--line);
+  padding: 18px 20px;
+  background: var(--concrete);
+}
+.group-stat:last-child{ border-right: none; }
+.group-stat:nth-child(even){ background: #131316; }
+.group-stat .num{
+  font-family: var(--display);
+  font-size: clamp(34px, 4.5vw, 56px);
+  line-height: 1;
+  display:block;
+  color: var(--cyan);
+}
+.group-stat:nth-child(2) .num{ color: var(--red); }
+.group-stat:nth-child(3) .num{ color: var(--yellow); }
+.group-stat:nth-child(4) .num{ color: var(--ink); }
+.group-stat .lab{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.55);
+  margin-top: 8px;
+  display:block;
+}
+@media (max-width: 720px){
+  .group-stats{ grid-template-columns: repeat(2, 1fr); }
+  .group-stat:nth-child(2){ border-right: none; }
+}
+
+.pax-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pax-card{
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+  padding: 22px 22px;
+  position: relative;
+  transition: background .2s ease, transform .2s ease;
+}
+.pax-card:hover{
+  background: var(--concrete2);
+  transform: translate(-2px,-2px);
+  box-shadow: 4px 4px 0 var(--red);
+  z-index: 2;
+}
+.pax-card.coord{ background: linear-gradient(135deg, #1a1a1c 0%, #221111 100%); }
+.pax-card.coord:hover{ box-shadow: 4px 4px 0 var(--cyan); }
+.pax-card .pax-no{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: rgba(244,241,234,0.5);
+  margin-bottom: 12px;
+  display:block;
+}
+.pax-card h4{
+  font-family: var(--display);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: .95;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+.pax-card .pax-badge{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  margin-bottom: 8px;
+  border:1px solid var(--line);
+}
+.pax-card .pax-badge.first{ background: var(--cyan); color: var(--bg); border-color: var(--cyan); }
+.pax-card .pax-badge.vet2{ background: var(--bg); color: var(--yellow); border-color: var(--yellow); }
+.pax-card .pax-badge.vet3{ background: var(--red); color: var(--ink); border-color: var(--red); }
+.pax-card .pax-badge.tp{ background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.pax-card .pax-age{
+  font-family: var(--body);
+  font-size: 14px;
+  color: rgba(244,241,234,0.6);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ----------- MAPPA ----------- */
+.mappa{
+  background:
+    linear-gradient(180deg, #0a0a0c, #0d0d10),
+    repeating-linear-gradient(135deg, transparent 0 22px, rgba(0,240,194,.025) 22px 23px);
+}
+.map-wrap{
+  display:grid;
+  grid-template-columns: 2.4fr 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--concrete);
+}
+@media (max-width: 900px){
+  .map-wrap{ grid-template-columns: 1fr; }
+}
+.map-svg-box{
+  border-right: 1px solid var(--line);
+  background: #0a0a0c;
+  position: relative;
+  min-height: 480px;
+  padding: 14px;
+}
+@media (max-width: 900px){
+  .map-svg-box{ border-right: none; border-bottom: 1px solid var(--line); }
+}
+.map-svg{ width: 100%; height: 100%; min-height: 460px; display:block; }
+
+.map-legend{
+  padding: 22px 24px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.map-legend h3{
+  font-family: var(--display);
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+  line-height: 1;
+}
+.map-legend ol{
+  list-style:none;
+  counter-reset: pin;
+}
+.map-legend li{
+  counter-increment: pin;
+  display:flex; align-items:flex-start; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+  cursor:pointer;
+  transition: color .2s ease;
+}
+.map-legend li:last-child{ border-bottom: none; }
+.map-legend li:hover{ color: var(--cyan); }
+.map-legend li::before{
+  content: counter(pin, decimal-leading-zero);
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  background: var(--red);
+  color: var(--ink);
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .05em;
+  font-weight: 700;
+  transition: background .2s ease, color .2s ease;
+}
+.map-legend li.hot::before{ background: var(--cyan); color: var(--bg); }
+.map-legend li.hot{ color: var(--cyan); }
+.map-legend .leg-body{
+  font-family: var(--body);
+  font-size: 16px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(244,241,234,0.92);
+}
+.map-legend .leg-body small{
+  display:block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.45);
+  margin-top: 2px;
+}
+
+.map-svg .vistula{ fill:none; stroke: var(--cyan); stroke-width: 22; stroke-linecap: round; opacity:.55; }
+.map-svg .vistula-line{ fill:none; stroke: var(--cyan); stroke-width: 2; stroke-dasharray: 4 6; opacity:.85; }
+.map-svg .district{ fill: rgba(244,241,234,0.04); stroke: var(--line); stroke-width: 1; }
+.map-svg .district-label{ fill: rgba(244,241,234,0.45); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
+.map-svg .river-label{ fill: var(--cyan); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: .25em; opacity: .8; }
+.map-svg .pin rect{ fill: var(--red); stroke: var(--ink); stroke-width: 1.5; transition: fill .2s ease, transform .2s ease; transform-origin: center; transform-box: fill-box; }
+.map-svg .pin text{ fill: var(--ink); font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; text-anchor: middle; pointer-events:none; }
+.map-svg .pin:hover rect{ fill: var(--cyan); transform: scale(1.15); }
+.map-svg .pin.hot rect{ fill: var(--cyan); }
+.map-svg .pin.hot text{ fill: var(--bg); }
+.map-svg .compass{ fill: var(--ink); font-family: 'Anton', sans-serif; font-size: 22px; letter-spacing: .04em; }
+.map-svg .compass-tick{ stroke: var(--ink); stroke-width: 2; }
+.map-svg .grid{ stroke: rgba(244,241,234,0.05); stroke-width: 1; }
+
+/* ----------- TRASPORTI ----------- */
+.trasporti{ background: #0c0c0f; }
+.trans-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+@media (max-width: 800px){ .trans-grid{ grid-template-columns: 1fr; } }
+.trans-card{
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+  padding: 32px 30px;
+}
+.trans-card .lab{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .2em;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--yellow);
+  padding: 4px 10px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.trans-card h4{
+  font-family: var(--display);
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: 0;
+}
+.trans-card h4 .ac{ color: var(--cyan); }
+.trans-card p{
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(244,241,234,0.86);
+  margin-bottom: 10px;
+}
+.trans-card p strong{ color: var(--cyan); font-weight: 700; }
+.trans-card .price{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: .12em;
+  background: var(--red);
+  color: var(--ink);
+  padding: 4px 10px;
+  margin-top: 6px;
+  margin-right: 4px;
+}
+.trans-card .warn-line{
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--yellow);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: rgba(244,241,234,0.78);
+  background: rgba(255,214,10,0.06);
+}
+.metro-lines{
+  display:grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 14px;
+  align-items:center;
+  margin-top: 12px;
+}
+.metro-lines .badge-m{
+  display:inline-flex;
+  align-items:center; justify-content:center;
+  width: 36px; height: 36px;
+  font-family: var(--display);
+  font-size: 22px;
+  color: var(--ink);
+}
+.metro-lines .m1{ background: var(--red); }
+.metro-lines .m2{ background: var(--yellow); color: var(--bg); }
+.metro-lines span{
+  font-family: var(--body);
+  font-size: 15px;
+  color: rgba(244,241,234,0.88);
+}
+.metro-lines span b{ color: var(--ink); }
+
+/* ----------- INFO CARDS ----------- */
+.info{ background: #0d0d10; }
+.info-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.info-card{
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 32px 28px;
+  background: var(--concrete);
+  position: relative;
+  transition: background .2s ease, transform .2s ease;
+}
+.info-card:hover{
+  background: var(--concrete2);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--red);
+  z-index: 2;
+}
+.info-icon{
+  display:flex; align-items:center; justify-content:center;
+  width: 52px; height: 52px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  margin-bottom: 22px;
+}
+.info-icon svg{ width: 26px; height: 26px; }
+.info-card h4{
+  font-family: var(--display);
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.info-card p{
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(244,241,234,0.82);
+}
+.info-card p strong{ color: var(--yellow); font-weight: 700; }
+.info-card p + p{ margin-top: 10px; }
+.info-card .corner{
+  position: absolute; top: 10px; right: 12px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: .15em; color: rgba(244,241,234,0.35);
+}
+
+/* ----------- LE SERATE ----------- */
+.serate{
+  background:
+    linear-gradient(180deg, #0a0a0c, #0e0e12),
+    repeating-linear-gradient(-45deg, transparent 0 30px, rgba(0,240,194,.025) 30px 31px);
+}
+.nights{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+}
+@media (max-width: 900px){ .nights{ grid-template-columns: 1fr; } }
+.night-col{
+  background: var(--concrete);
+  padding: 30px 30px 32px;
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+.night-col:last-child{ border-right: none; }
+@media (max-width: 900px){
+  .night-col{ border-right: none; border-bottom: 1px solid var(--line); }
+  .night-col:last-child{ border-bottom: none; }
+}
+.night-col.big{
+  background: linear-gradient(135deg, var(--concrete) 0%, #1a0e15 100%);
+}
+.night-head{
+  display:flex; justify-content:space-between; align-items:flex-end;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  flex-wrap:wrap; gap: 10px;
+}
+.night-head .label{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+.night-head .big-tag{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  background: var(--red);
+  color: var(--ink);
+  padding: 4px 10px;
+}
+.night-head h3{
+  font-family: var(--display);
+  font-size: clamp(40px, 4.6vw, 64px);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  line-height: .9;
+  margin-top: 6px;
+  width: 100%;
+}
+.night-head h3 .ac{ color: var(--red); }
+.night-head h3 .yl{ color: var(--yellow); }
+
+.night-flow{
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+}
+.night-step{
+  display:grid;
+  grid-template-columns: 90px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px dashed var(--line);
+  position: relative;
+}
+.night-step:last-child{ border-bottom: none; }
+.night-step .step-time{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--yellow);
+  font-weight: 700;
+  padding-top: 4px;
+}
+.night-step h5{
+  font-family: var(--headline);
+  font-weight: 700;
+  font-size: 19px;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+  margin-bottom: 4px;
+}
+.night-step p{
+  font-family: var(--body);
+  font-size: 15px;
+  color: rgba(244,241,234,0.82);
+  line-height: 1.4;
+}
+.night-step p strong{ color: var(--cyan); font-weight: 700; }
+
+.night-foot{
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--cyan);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.78);
+  background: rgba(0,240,194,0.05);
+}
+.night-foot.warn{ border-left-color: var(--yellow); background: rgba(255,214,10,0.06); }
+
+/* ----------- DA NON PERDERE ----------- */
+.spots{
+  background:
+    linear-gradient(180deg, var(--bg), #0c0c0e),
+    repeating-linear-gradient(45deg, transparent 0 20px, rgba(232,9,42,.04) 20px 22px);
+}
+.spots-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+.spot-card{
+  border: 1px solid var(--line);
+  background: var(--concrete);
+  padding: 28px 26px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform .25s ease, background .25s ease;
+}
+.spot-card::before{
+  content:""; position:absolute;
+  top:0; right:0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 36px 36px 0;
+  border-color: transparent var(--red) transparent transparent;
+  transition: border-color .2s ease;
+}
+.spot-card:hover{
+  background: var(--bg);
+  transform: translate(-2px, -2px);
+}
+.spot-card:hover::before{ border-color: transparent var(--cyan) transparent transparent; }
+
+.spot-type{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  padding: 3px 6px;
+  margin-bottom: 16px;
+}
+.spot-card h4{
+  font-family: var(--display);
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+.spot-card p{
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgba(244,241,234,0.78);
+}
+.spot-card .extra{
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+/* ----------- ATTIVITÀ EXTRA ----------- */
+.extra{ background: #0c0c0e; }
+.extra-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.extra-card{
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+  padding: 28px 26px;
+  position: relative;
+  transition: background .2s ease, transform .2s ease;
+}
+.extra-card:hover{
+  background: var(--concrete2);
+  transform: translate(-2px,-2px);
+  box-shadow: 5px 5px 0 var(--yellow);
+  z-index: 2;
+}
+.extra-card .x-tags{
+  display:flex; flex-wrap:wrap; gap: 6px; margin-bottom: 14px;
+}
+.extra-card .x-tag{
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: rgba(244,241,234,0.7);
+}
+.extra-card .x-tag.day{ color: var(--cyan); border-color: var(--cyan); }
+.extra-card .x-tag.cost{ color: var(--yellow); border-color: var(--yellow); }
+.extra-card .x-tag.warn{ color: var(--ink); background: var(--red); border-color: var(--red); }
+.extra-card .x-tag.cult{ color: var(--ink); background: var(--concrete2); border-color: var(--line); }
+.extra-card h4{
+  font-family: var(--display);
+  font-size: 28px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+.extra-card p{
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(244,241,234,0.82);
+}
+.extra-card p strong{ color: var(--cyan); font-weight: 700; }
+.extra-card .num-corner{
+  position: absolute; top: 14px; right: 16px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: .2em;
+  color: rgba(244,241,234,0.3);
+}
+
+/* ----------- FOOD ----------- */
+.food{ background: #0e0e11; }
+.food-split{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+@media (max-width: 800px){ .food-split{ grid-template-columns: 1fr; } }
+.food-col{
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 32px;
+  background: var(--concrete);
+}
+.food-col h3{
+  font-family: var(--display);
+  font-size: clamp(36px, 4.6vw, 64px);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  line-height: .9;
+  margin-bottom: 24px;
+  display:flex; align-items:center; gap: 14px;
+}
+.food-col h3::before{
+  content:""; display:inline-block;
+  width: 18px; height: 18px;
+  background: var(--red);
+}
+.food-col.right h3::before{ background: var(--cyan); }
+
+.food-list{ list-style:none; }
+.food-item{
+  padding: 18px 0;
+  border-bottom: 1px dashed var(--line);
+  display:grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.food-item:last-child{ border-bottom: none; }
+.food-mark{
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--yellow);
+  font-weight: 700;
+  letter-spacing: .14em;
+  padding-top: 4px;
+  min-width: 38px;
+}
+.food-item h4{
+  font-family: var(--headline);
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+  margin-bottom: 4px;
+}
+.food-item p{
+  font-family: var(--body);
+  font-size: 15px;
+  color: rgba(244,241,234,0.78);
+  line-height: 1.45;
+}
+
+/* ----------- CHECKLIST ----------- */
+.checklist{
+  background:
+    linear-gradient(0deg, #0a0a0c, #0d0d10);
+}
+.checklist-meta{
+  display:flex; justify-content:space-between; align-items:center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  color: rgba(244,241,234,0.6);
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  background: var(--concrete);
+  flex-wrap:wrap; gap: 12px;
+}
+.checklist-meta .progress{
+  display:flex; align-items:center; gap: 12px;
+}
+.progress-bar{
+  position: relative;
+  width: 180px; height: 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.progress-bar-fill{
+  position: absolute; left: 0; top:0; bottom: 0;
+  width: 0%;
+  background: var(--cyan);
+  transition: width .35s ease;
+}
+.reset-btn{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--red);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.reset-btn:hover{ background: var(--red); }
+
+.todos{ list-style: none; display:grid; gap: 0;
+  border-top: 1px solid var(--line); }
+.todo{
+  display:grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+  transition: background .2s ease;
+}
+.todo:hover{ background: var(--concrete2); }
+.todo input{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 56px; height: 100%;
+  min-height: 64px;
+  margin: 0;
+  cursor: pointer;
+  background: var(--bg);
+  border: 0;
+  border-right: 1px solid var(--line);
+  position: relative;
+  transition: background .2s ease;
+}
+.todo input::before{
+  content:"";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 18px; height: 18px;
+  border: 2px solid var(--ink);
+}
+.todo input:checked{ background: var(--cyan); }
+.todo input:checked::before{
+  background: var(--bg);
+  border-color: var(--bg);
+  background-image: linear-gradient(45deg, transparent 45%, var(--cyan) 45% 55%, transparent 55%),
+                    linear-gradient(-45deg, transparent 45%, var(--cyan) 45% 55%, transparent 55%);
+}
+.todo label{
+  padding: 18px 22px;
+  font-family: var(--body);
+  font-size: 17px;
+  cursor: pointer;
+  line-height: 1.4;
+  color: rgba(244,241,234,0.92);
+  display:flex; align-items:center; gap: 10px;
+  flex-wrap: wrap;
+}
+.todo label .num{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--red);
+  font-weight: 700;
+}
+.todo label .note{
+  display:block; width:100%;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: rgba(244,241,234,0.45);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+.todo label .cat{
+  display:inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .18em;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--yellow);
+  padding: 2px 6px;
+  text-transform: uppercase;
+}
+.todo input:checked + label{ text-decoration: line-through; color: rgba(244,241,234,0.4); }
+
+/* ----------- FOOTER ----------- */
+footer{
+  background: var(--ink);
+  color: var(--bg);
+  padding: 60px 32px 40px;
+  border-top: 6px solid var(--red);
+  position: relative;
+}
+footer .foot-grid{
+  max-width: 1400px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 800px){
+  footer .foot-grid{ grid-template-columns: 1fr; }
+}
+.foot-brand{
+  font-family: var(--display);
+  font-size: clamp(60px, 9vw, 130px);
+  line-height: .85;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+}
+.foot-brand .red{ color: var(--red); }
+.foot-block h5{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--red);
+  font-weight: 700;
+}
+.foot-block p, .foot-block li{
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.foot-block ul{ list-style:none; }
+.foot-block li{ padding: 4px 0; border-bottom: 1px dashed rgba(11,11,12,0.15); }
+.foot-stamp{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  max-width: 1400px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(11,11,12,0.15);
+  display:flex; justify-content:space-between; gap: 20px; flex-wrap: wrap;
+}
+
+/* ----------- REVEAL ANIMATIONS ----------- */
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.in{ opacity: 1; transform: none; }
+.reveal.delay-1{ transition-delay: .08s; }
+.reveal.delay-2{ transition-delay: .16s; }
+.reveal.delay-3{ transition-delay: .24s; }
+.reveal.delay-4{ transition-delay: .32s; }
+.reveal.delay-5{ transition-delay: .40s; }
+.reveal.delay-6{ transition-delay: .48s; }
+
+/* ----------- SCROLLSPY ----------- */
+.nav-links a.active{ color: var(--cyan); }
+.nav-links a.active::after{ width: 100%; }
+
+/* ----------- BOTTOM NAV (MOBILE) ----------- */
+.bottom-nav{
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 120;
+  display: none;
+  background: rgba(11,11,12,0.94);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav ul{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+}
+.bottom-nav a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px 12px;
+  text-decoration: none;
+  color: rgba(244,241,234,0.6);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  border-right: 1px solid var(--line);
+  transition: color .2s ease, background .2s ease;
+}
+.bottom-nav li:last-child a{ border-right: none; }
+.bottom-nav a .ico{ font-size: 17px; line-height: 1; }
+.bottom-nav a.active{ color: var(--cyan); background: rgba(0,240,194,0.06); }
+@media (max-width: 1100px){
+  .bottom-nav{ display: block; }
+  body{ padding-bottom: calc(58px + env(safe-area-inset-bottom)); }
+}
+
+/* ----------- PAX FILTER CHIPS (VOLI) ----------- */
+.pax-filter{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.pax-filter .chip{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  background: var(--concrete);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 11px 14px;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.pax-filter .chip:hover{ border-color: var(--cyan); color: var(--cyan); }
+.pax-filter .chip.active{ background: var(--cyan); color: var(--bg); border-color: var(--cyan); }
+.flight-card.dim{ opacity: .22; filter: grayscale(.7); }
+.flight-card.lit{ box-shadow: 4px 4px 0 var(--cyan); transform: translate(-2px,-2px); }
+.flight-pax small{
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.45);
+  margin-top: 6px;
+}
+
+/* ----------- SOS STRIP ----------- */
+.sos-strip{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  margin-bottom: 36px;
+  scroll-margin-top: 70px;
+}
+.sos-btn{
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--concrete);
+  border-right: 1px solid var(--line);
+  padding: 18px 16px;
+  transition: background .2s ease, transform .2s ease;
+}
+.sos-btn:last-child{ border-right: none; }
+.sos-btn:hover{ background: var(--concrete2); }
+.sos-btn b{
+  display: block;
+  font-family: var(--display);
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 7px;
+  color: var(--cyan);
+  font-weight: 400;
+}
+.sos-btn.danger b{ color: var(--red); }
+.sos-btn span{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.55);
+}
+@media (max-width: 720px){
+  .sos-strip{ grid-template-columns: 1fr 1fr; }
+  .sos-btn{ border-bottom: 1px solid var(--line); }
+  .sos-btn:nth-child(2){ border-right: none; }
+  .sos-btn:nth-child(3){ grid-column: 1 / -1; border-right: none; border-bottom: none; }
+}
+
+/* ----------- CONVERTER PLN→EUR ----------- */
+.conv{
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  margin: 12px 0;
+}
+.conv input{
+  flex: 1;
+  min-width: 0;
+  background: var(--bg);
+  border: 0;
+  border-right: 1px solid var(--line);
+  color: var(--yellow);
+  font-family: var(--display);
+  font-size: 26px;
+  padding: 10px 12px;
+  outline: none;
+}
+.conv input:focus{ background: #101013; }
+.conv-eq{
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-family: var(--display);
+  font-size: 26px;
+  color: var(--cyan);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.conv-chips{ display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.conv-chip{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 7px 11px;
+  cursor: pointer;
+  transition: color .2s ease, border-color .2s ease;
+}
+.conv-chip:hover{ border-color: var(--cyan); color: var(--cyan); }
+
+/* ----------- ROSTER GRUPPO (compatto) ----------- */
+.roster{
+  list-style: none;
+  border: 1px solid var(--line);
+  border-bottom: none;
+}
+.roster-row{
+  display: grid;
+  grid-template-columns: 44px minmax(0,1fr) auto;
+  gap: 0 14px;
+  align-items: center;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+  transition: background .15s ease;
+}
+.roster-row:nth-child(even){ background: #131316; }
+.roster-row:hover{ background: var(--concrete2); }
+.roster-row.coord{ background: linear-gradient(90deg, #221114, var(--concrete)); }
+.r-no{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: rgba(244,241,234,0.4);
+}
+.r-name{
+  font-family: var(--headline);
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.r-name em{
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: rgba(244,241,234,0.45);
+  margin-left: 8px;
+}
+.r-badge{
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.r-badge.first{ background: var(--cyan); color: var(--bg); border-color: var(--cyan); }
+.r-badge.vet2{ color: var(--yellow); border-color: var(--yellow); }
+.r-badge.vet3{ background: var(--red); color: var(--ink); border-color: var(--red); }
+.r-badge.tp{ background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.r-badge.new{ color: var(--cyan); border-color: var(--cyan); }
+@media (max-width: 480px){
+  .roster-row{ grid-template-columns: 30px minmax(0,1fr) auto; padding: 12px 12px; gap: 0 10px; }
+  .r-name{ font-size: 15px; white-space: normal; line-height: 1.2; }
+  .r-name em{ display: block; margin-left: 0; margin-top: 3px; }
+}
+
+/* ----------- COORDINATORE ----------- */
+.coord-intro{ background: #0c0c0e; }
+.coord-card{
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--concrete);
+}
+@media (max-width: 800px){ .coord-card{ grid-template-columns: 1fr; } }
+.coord-side{
+  border-right: 1px solid var(--line);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #131316;
+}
+@media (max-width: 800px){
+  .coord-side{ border-right: none; border-bottom: 1px solid var(--line); flex-direction: row; align-items: center; }
+}
+.coord-avatar{
+  width: 84px; height: 84px;
+  flex-shrink: 0;
+  background: var(--red);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coord-facts{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.6);
+  line-height: 2;
+}
+.coord-facts b{ color: var(--cyan); }
+.coord-main{ padding: 28px 28px 30px; }
+.coord-main h3{
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 52px);
+  text-transform: uppercase;
+  line-height: .95;
+  letter-spacing: -.01em;
+  margin-bottom: 14px;
+}
+.coord-main h3 .ac{ color: var(--cyan); }
+.coord-main p{
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(244,241,234,0.88);
+  max-width: 680px;
+}
+.coord-more{ margin-top: 12px; }
+.coord-more p{ margin-bottom: 10px; }
+.coord-more summary{
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  transition: background .2s ease, color .2s ease;
+}
+.coord-more summary:hover{ background: var(--cyan); color: var(--bg); }
+.coord-more summary::-webkit-details-marker{ display: none; }
+.coord-more summary::after{ content: " ▾"; }
+.coord-more[open] summary::after{ content: " ▴"; }
+.coord-more[open] summary{ margin-bottom: 14px; }
+.skip-line{ margin-top: 20px; }
+.skip-line a{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.55);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 2px;
+}
+.skip-line a:hover{ color: var(--yellow); border-bottom-color: var(--yellow); }
+
+/* ----------- TRASPORTI: chi usa la tratta ----------- */
+.trans-card .who-line{
+  font-family: var(--headline);
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  line-height: 1.45;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border: 1px dashed var(--cyan);
+  background: rgba(0,240,194,0.05);
+}
+.trans-card .who-line small{
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .2em;
+  color: rgba(244,241,234,0.5);
+  margin-bottom: 5px;
+}
+
+/* ----------- PREZZI FOOD ----------- */
+.f-price{
+  display: inline-block;
+  margin-top: 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  border: 1px dashed var(--line);
+  padding: 3px 8px;
+}
+
+/* ----------- HERO BACKGROUND (Varsavia stilizzata) ----------- */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: .09;
+  pointer-events: none;
+}
+
+/* ----------- PACCHETTO (incluso / non incluso) ----------- */
+.pacchetto{ background: #0d0d10; }
+.pack-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+}
+@media (max-width: 800px){ .pack-split{ grid-template-columns: 1fr; } }
+.pack-col{
+  padding: 36px 32px;
+  background: var(--concrete);
+  border-right: 1px solid var(--line);
+}
+.pack-col:last-child{ border-right: none; }
+@media (max-width: 800px){
+  .pack-col{ border-right: none; border-bottom: 1px solid var(--line); padding: 28px 20px; }
+  .pack-col:last-child{ border-bottom: none; }
+}
+.pack-col h3{
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 52px);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  line-height: .9;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.pack-col h3::before{
+  content: "";
+  display: inline-block;
+  width: 18px; height: 18px;
+  background: var(--cyan);
+  flex-shrink: 0;
+}
+.pack-col.no h3::before{ background: var(--red); }
+.pack-list{ list-style: none; }
+.pack-list li{
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.45;
+  color: rgba(244,241,234,0.88);
+}
+.pack-list li:last-child{ border-bottom: none; }
+.pack-list .pm{
+  width: 24px; height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 1px;
+}
+.pack-col.yes .pm{ background: var(--cyan); color: var(--bg); }
+.pack-col.no .pm{ background: transparent; color: var(--red); border: 1px solid var(--red); }
+.pack-list b{ color: var(--ink); }
+.pack-list .how{
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-top: 4px;
+}
+
+/* ----------- ITINERARI DAY 3 ----------- */
+.itin-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 44px;
+}
+@media (max-width: 1000px){ .itin-grid{ grid-template-columns: 1fr; } }
+.itin-card{
+  border: 1px solid var(--line);
+  background: var(--concrete);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.itin-card .it-label{
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+.itin-card.b .it-label{ color: var(--yellow); }
+.itin-card.c .it-label{ color: var(--red); }
+.itin-card h4{
+  font-family: var(--display);
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+.itin-card .it-sub{
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgba(244,241,234,0.7);
+  margin-bottom: 14px;
+}
+.itin-steps{ list-style: none; flex: 1; }
+.itin-steps li{
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.4;
+  color: rgba(244,241,234,0.88);
+}
+.itin-steps li:last-child{ border-bottom: none; }
+.itin-steps .n{
+  width: 24px; height: 24px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itin-card.b .itin-steps .n{ color: var(--yellow); }
+.itin-card.c .itin-steps .n{ color: var(--red); }
+.itin-steps b{ color: var(--ink); }
+.itin-steps .leg{
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(244,241,234,0.45);
+  margin-top: 3px;
+}
+.itin-meta{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+
+/* ----------- LINK UTILITIES ----------- */
+.map-legend a{ color: inherit; text-decoration: none; }
+.foot-block a{ color: inherit; }
+
+/* ----------- MOBILE DENSITY ----------- */
+@media (max-width: 700px){
+  section{ padding: 64px 18px; scroll-margin-top: 50px; }
+  .hero{ padding: 96px 18px 48px; }
+  .nav-inner{ padding: 14px 18px; }
+  .section-head{ margin-bottom: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+  .reveal{ opacity:1; transform:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top" style="color:inherit; text-decoration:none;"><span class="dot"></span> WeRoad // Warsaw '26</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#pacchetto">Pacchetto</a></li>
+      <li><a href="#programma">Programma</a></li>
+      <li><a href="#voli">Voli</a></li>
+      <li><a href="#rooming">Gruppo</a></li>
+      <li><a href="#mappa">Mappa</a></li>
+      <li><a href="#trasporti">Trasporti</a></li>
+      <li><a href="#serate">Serate</a></li>
+      <li><a href="#spots">Spot</a></li>
+      <li><a href="#extra">Extra</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#checklist">Checklist</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<header class="hero" id="top">
+
+  <svg class="hero-bg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g fill="none" stroke="#f4f1ea" stroke-width="2">
+      <!-- linea di terra -->
+      <line x1="0" y1="720" x2="1440" y2="720"/>
+      <!-- blocchi generici -->
+      <rect x="60" y="600" width="90" height="120"/>
+      <rect x="170" y="640" width="70" height="80"/>
+      <rect x="640" y="620" width="80" height="100"/>
+      <!-- tram -->
+      <rect x="260" y="664" width="110" height="44"/>
+      <line x1="284" y1="664" x2="284" y2="708"/>
+      <line x1="312" y1="664" x2="312" y2="708"/>
+      <line x1="340" y1="664" x2="340" y2="708"/>
+      <line x1="272" y1="708" x2="272" y2="720"/>
+      <line x1="358" y1="708" x2="358" y2="720"/>
+      <line x1="300" y1="640" x2="300" y2="664"/>
+      <!-- Palazzo della Cultura (PKiN) -->
+      <rect x="420" y="560" width="180" height="160"/>
+      <rect x="455" y="440" width="110" height="120"/>
+      <rect x="480" y="330" width="60" height="110"/>
+      <rect x="497" y="260" width="26" height="70"/>
+      <line x1="510" y1="160" x2="510" y2="260"/>
+      <circle cx="510" cy="370" r="16"/>
+      <line x1="430" y1="600" x2="590" y2="600"/>
+      <!-- Varso Tower -->
+      <rect x="760" y="310" width="70" height="410"/>
+      <path d="M 760 310 L 830 270 L 830 310"/>
+      <line x1="775" y1="160" x2="775" y2="280"/>
+      <!-- case della Old Town -->
+      <path d="M 900 720 V 640 L 935 610 L 970 640 V 720"/>
+      <path d="M 970 720 V 650 L 1000 622 L 1030 650 V 720"/>
+      <path d="M 1030 720 V 640 L 1062 614 L 1094 640 V 720"/>
+      <!-- medaglione Sirenetta (Syrenka) -->
+      <circle cx="1240" cy="420" r="150"/>
+      <path d="M 1180 540 C 1240 520, 1200 470, 1235 440 C 1270 410, 1245 380, 1255 350"/>
+      <path d="M 1255 350 C 1262 335, 1276 330, 1284 338"/>
+      <line x1="1262" y1="362" x2="1330" y2="300"/>
+      <circle cx="1198" cy="392" r="26"/>
+    </g>
+    <!-- Vistola -->
+    <path d="M 0 762 Q 120 748, 240 762 T 480 762 T 720 762 T 960 762 T 1200 762 T 1440 762" fill="none" stroke="#00f0c2" stroke-width="2"/>
+    <g fill="#f4f1ea" font-family="'Space Mono', monospace" font-size="22">
+      <text x="220" y="240">★</text>
+      <text x="690" y="180">★</text>
+      <text x="1080" y="210" fill="#e8092a">★</text>
+    </g>
+    <g fill="#f4f1ea" font-family="'Space Mono', monospace" font-size="12" letter-spacing="4">
+      <text x="510" y="745" text-anchor="middle">PKIN</text>
+      <text x="795" y="745" text-anchor="middle">VARSO</text>
+      <text x="1240" y="600" text-anchor="middle">SYRENKA · WARSZAWA</text>
+    </g>
+  </svg>
+
+  <div class="hero-grid">
+
+    <div class="hero-meta">
+      <div class="ping">SIGNAL · 52°13'N 21°02'E</div>
+      <div>POLSKA · WARSZAWA · GMT+2</div>
+      <div>WR · GROUP · 11 WEROADERS</div>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="v-stack">
+        <span class="shadow" aria-hidden="true">VARSAVIA</span>
+        <span class="glitch">VARSAVIA</span>
+      </span>
+    </h1>
+
+    <div class="hero-sub">
+      <p class="hero-tagline">
+        Tre giorni. Una città che <em>non dorme</em>.<br>
+        Un gruppo che <em>non si ferma</em>.
+      </p>
+      <div class="hero-dates">
+        WeRoad Weekend<br>
+        <strong>19 — 21 GIU 2026</strong>
+        EST. ARR. WAW
+      </div>
+    </div>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="cd-cell"><span class="cd-num" id="cdDays">--</span><span class="cd-label">Days</span></div>
+      <div class="cd-cell"><span class="cd-num" id="cdHours">--</span><span class="cd-label">Hours</span></div>
+      <div class="cd-cell"><span class="cd-num" id="cdMin">--</span><span class="cd-label">Minutes</span></div>
+      <div class="cd-cell"><span class="cd-num" id="cdSec">--</span><span class="cd-label">Seconds</span></div>
+      <div class="cd-status" id="cdStatus">CALCULATING…</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============== MARQUEE ============== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>★ VODKA</span><span>★ PIEROGI</span><span>★ NEON</span><span>★ BRUTALISM</span>
+    <span>★ ZAGRYWKI</span><span>★ TEATRO CUBANO</span><span>★ PALAC KULTURY</span>
+    <span class="star">★</span><span>VARSAVIA NON DORME</span>
+    <span>★ VODKA</span><span>★ PIEROGI</span><span>★ NEON</span><span>★ BRUTALISM</span>
+    <span>★ ZAGRYWKI</span><span>★ TEATRO CUBANO</span><span>★ PALAC KULTURY</span>
+  </div>
+</div>
+
+<!-- =================== COORDINATORE =================== -->
+<section class="coord-intro" id="coordinatore">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 00</span>
+      <h2 class="section-title">Il vostro <span class="ac">coordinatore</span></h2>
+      <span class="section-meta">2 minuti di lettura · oppure salta pure ↓</span>
+    </div>
+
+    <div class="coord-card reveal">
+      <div class="coord-side">
+        <div class="coord-avatar">DJ</div>
+        <div class="coord-facts">
+          <b>Davide Janiri</b><br>
+          28 anni · Monza<br>
+          Marketing &amp; sales tech<br>
+          12° WeRoad da coordinatore
+        </div>
+      </div>
+      <div class="coord-main">
+        <h3>Ciao, sono <span class="ac">Davide</span></h3>
+        <p>Ciao WeRoaders! Ho 28 anni e vivo a Monza. Nella vita mi occupo di marketing e vendite nel mondo tech, ma la mia vera passione è esplorare — con la fotocamera, un buon libro o lo zaino in spalla.</p>
+        <details class="coord-more">
+          <summary>Leggi tutto</summary>
+          <p>Per me viaggiare è molto più di uno spostamento: è scoperta, crescita, un'occasione per immergersi in culture diverse e collezionare momenti che lasciano il segno. Sono curioso, mi piace mettermi in gioco, e amo alternare momenti di avventura a quelli più tranquilli di riflessione.</p>
+          <p>Quando non sto pianificando la prossima partenza, mi dedico al fitness — una passione che mi ricorda ogni giorno l'importanza di spingersi un po' oltre i propri limiti. Mi piacciono i dettagli e i paesaggi che tolgono il fiato, dove le parole non servono più.</p>
+          <p>Sono certo che con voi condividerò risate, silenzi e tanti chilometri — questo weekend tra le vie di Varsavia. Zaino in spalla, si parte!</p>
+        </details>
+        <div class="skip-line"><a href="#programma">Salta al programma ↓</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== PACCHETTO =================== -->
+<section class="pacchetto" id="pacchetto">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// ★</span>
+      <h2 class="section-title">Il vostro <span class="yl">pacchetto</span></h2>
+      <span class="section-meta">Cosa è già pagato · cosa no</span>
+    </div>
+
+    <div class="pack-split">
+
+      <div class="pack-col yes reveal">
+        <h3>Incluso</h3>
+        <ul class="pack-list">
+          <li>
+            <span class="pm">✓</span>
+            <div><b>2 notti all'A&amp;O Warsaw Wola</b> — camere doppie, triple o quadruple, tutte con bagno privato. Quartiere Wola, metro a 7 minuti.</div>
+          </li>
+          <li>
+            <span class="pm">✓</span>
+            <div><b>Welcome dinner al Podwale 25</b> — menu completo: antipasti, zuppa, secondo, dessert + una birra, acqua e caffè. Arrivate affamati.</div>
+          </li>
+          <li>
+            <span class="pm">✓</span>
+            <div><b>Vodka Museum con degustazione</b> — tour guidato di ~70 minuti e tasting finale. Portate un documento, lo chiedono all'ingresso.</div>
+          </li>
+          <li>
+            <span class="pm">✓</span>
+            <div><b>Salita al Palazzo della Cultura</b> — la terrazza panoramica più iconica della città, al tramonto del venerdì.</div>
+          </li>
+          <li>
+            <span class="pm">✓</span>
+            <div><b>Davide, il vostro coordinatore</b> — dall'arrivo alla partenza: logistica, prenotazioni e morale del gruppo.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pack-col no reveal delay-1">
+        <h3>Non incluso</h3>
+        <ul class="pack-list">
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Voli A/R</b> — ognuno ha il suo, tutti i dettagli nella sezione Voli.<span class="how">→ già acquistati da ciascuno</span></div>
+          </li>
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Colazioni e pranzi</b> — trovate le dritte giuste nella sezione Cibo, dai milk bar alle food hall.<span class="how">→ portafoglio personale</span></div>
+          </li>
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Walking tour guidato del sabato</b> — mezza giornata con guida in italiano per le vie di Varsavia.<span class="how">→ si paga con la Cassa Comune</span></div>
+          </li>
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Trasporti in città</b> — biglietti weekend di gruppo per tram e metro.<span class="how">→ si paga con la Cassa Comune</span></div>
+          </li>
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Serate</b> — ingressi, drink e follie su Mazowiecka.<span class="how">→ portafoglio personale</span></div>
+          </li>
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Attività extra del Day 3</b> — musei, Varso Tower e itinerari della domenica.<span class="how">→ portafoglio personale</span></div>
+          </li>
+          <li>
+            <span class="pm">✕</span>
+            <div><b>Extra alla welcome dinner</b> — tutto ciò che ordinate oltre il menu incluso.<span class="how">→ si paga a parte a fine cena</span></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== PROGRAMMA =================== -->
+<section class="programma" id="programma">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 01</span>
+      <h2 class="section-title">Il <span class="ac">programma</span></h2>
+      <span class="section-meta">3 giorni · 1 città · 0 pause</span>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="d1" role="tab"><small>VENERDÌ · 19 GIU '26</small>Giorno 01</button>
+      <button class="tab-btn" data-tab="d2" role="tab"><small>SABATO · 20 GIU '26</small>Giorno 02</button>
+      <button class="tab-btn" data-tab="d3" role="tab"><small>DOMENICA · 21 GIU '26</small>Giorno 03</button>
+    </div>
+
+    <div class="tab-pane active" id="d1">
+      <div class="day-grid">
+        <aside class="day-meta">
+          <span class="badge">DAY ONE</span>
+          <h3>Arrivi, Palazzo &amp; Welcome Dinner</h3>
+          <p>Hotel · Skyline · Pierogi · Shot</p>
+        </aside>
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <span class="tl-time">15:00+</span>
+            <h4 class="tl-title">Check-in <span class="pin">/</span> A&amp;O Warsaw Wola</h4>
+            <p class="tl-body">Quartiere <strong>Wola</strong>, vicino alla metro. Lascia le valigie, prendi solo l'essenziale: il primo giorno è già lungo.</p>
+            <span class="tl-tag alt">HOTEL</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">Arrivo → 18:45</span>
+            <h4 class="tl-title">Tempo libero <span class="pin">/</span> in base al tuo volo</h4>
+            <p class="tl-body">Chi atterra la mattina ha mezza giornata libera: <strong>Stare Miasto</strong>, pranzo (leggero!) in una food hall o relax in hotel. Davide e Martina arrivano alle 17:05 — ritrovo di tutto il gruppo in hotel verso le <strong>18:30</strong>.</p>
+            <span class="tl-tag alt">TEMPO LIBERO</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">19:00</span>
+            <h4 class="tl-title">Palazzo della Cultura e della Scienza</h4>
+            <p class="tl-body">Salita inclusa nel vostro pacchetto. Vista panoramica della città — consigliato al tramonto. <em>Chiude alle 20:00</em>, calcola bene i tempi.</p>
+            <span class="tl-tag">INCLUSO</span>
+            <span class="tl-tag warn">ULTIMA ENTRATA 20:00</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">20:30 / 21:00</span>
+            <h4 class="tl-title">Welcome Dinner <span class="pin">/</span> Podwale 25</h4>
+            <p class="tl-body">Ristorante tradizionale polacco in Old Town, fuori le mura. Menù fisso: <strong>antipasti, zuppa, secondo, dessert, birra, acqua, caffè</strong>. Durata ~2,5/3 ore. Consiglio: pranzo leggero e <strong>niente merenda</strong> — le porzioni sono enormi.</p>
+            <span class="tl-tag">CENA INCLUSA</span>
+            <span class="tl-tag warn">⚠ EXTRA A CARICO TUO</span>
+          </li>
+          <li class="tl-item warn reveal">
+            <span class="tl-time">23:30 →</span>
+            <h4 class="tl-title">Dopo cena <span class="pin">/</span> Mazowiecka</h4>
+            <p class="tl-body">Apertura ufficiale del weekend: <strong>Czupito + Zagrywki</strong>. Vedi sezione "Le Serate" qui sotto per il piano dettagliato.</p>
+            <span class="tl-tag">ATTIVITÀ DI GRUPPO</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="d2">
+      <div class="day-grid">
+        <aside class="day-meta">
+          <span class="badge">DAY TWO</span>
+          <h3>Tour, Vodka Museum &amp; Notte</h3>
+          <p>Guida · Tasting · Rooftop · Club</p>
+        </aside>
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <span class="tl-time">09:30 – 14:00</span>
+            <h4 class="tl-title">Guided Walking Tour <span class="pin">/</span> Joanna Bonini</h4>
+            <p class="tl-body">Guida italiana. Dopo il tour: pranzo alla <strong>Fabryka Norblina</strong> (ex fabbrica d'argento, food hall a 10 min a piedi dall'hotel). Il tour si paga con la <strong>Cassa Comune</strong>.</p>
+            <span class="tl-tag">GUIDA IT</span>
+            <span class="tl-tag alt">PRANZO FOOD HALL</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">~15:00 – 16:30</span>
+            <h4 class="tl-title">Tempo libero <span class="pin">/</span> zona Norblin</h4>
+            <p class="tl-body">Buco tra pranzo e Vodka Museum: esplora la food hall, fai un salto a <strong>Browary Warszawskie</strong> (5 min) o passa in hotel a ricaricare (10 min a piedi). La durata esatta dipende dallo slot del museo.</p>
+            <span class="tl-tag alt">TEMPO LIBERO</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">16:00 – 19:00</span>
+            <h4 class="tl-title">Vodka Museum <span class="pin">/</span> Tasting</h4>
+            <p class="tl-body">Durata <strong>~70 minuti</strong>, tasting incluso. ⚠ <strong>Porta il documento d'identità</strong>.</p>
+            <span class="tl-tag warn">⚠ DOCUMENTO OBBLIGATORIO</span>
+            <span class="tl-tag">TASTING INCLUSO</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">20:30+</span>
+            <h4 class="tl-title">Cena <span class="pin">/</span> Setki Powodów</h4>
+            <p class="tl-body">Bistro nell'edificio del Vodka Museum, comodissimo dopo il tasting.</p>
+          </li>
+          <li class="tl-item warn reveal">
+            <span class="tl-time">23:00 →</span>
+            <h4 class="tl-title">BIG NIGHT <span class="pin">/</span> Teatro Cubano · Moon</h4>
+            <p class="tl-body">La notte grossa del weekend. Piano dettagliato in <strong>"Le Serate"</strong>. ⚠ <strong>Outfit total black obbligatorio</strong> se andiamo al Moon.</p>
+            <span class="tl-tag">BIG NIGHT</span>
+            <span class="tl-tag warn">DRESS CODE BLACK</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="d3">
+      <div class="day-grid">
+        <aside class="day-meta">
+          <span class="badge">DAY THREE</span>
+          <h3>Giorno libero, brunch &amp; partenza</h3>
+          <p>Castello · Chopin · Pierogi · Volo</p>
+        </aside>
+        <ol class="timeline">
+          <li class="tl-item warn reveal">
+            <span class="tl-time">10:00</span>
+            <h4 class="tl-title">Check-out <span class="pin">/</span> Deposito bagagli</h4>
+            <p class="tl-body">Check-out entro le <strong>10:00</strong> (di domenica potrebbe essere alle 11:00 — verifichiamo al check-in). Borse in deposito bagagli in hotel — la giornata è ancora lunga.</p>
+            <span class="tl-tag warn">⏰ DEADLINE 10:00</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">Mattina</span>
+            <h4 class="tl-title">Brunch consigliato</h4>
+            <p class="tl-body"><strong>Charlotte</strong> (Nowy Świat) — la mecca del brunch a Varsavia. Alternative: <strong>Bułke Przez Bułkę</strong> o <strong>Cioccolateria Wedel</strong> per i golosi.</p>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">12:00</span>
+            <h4 class="tl-title">Chopin Concert <span class="pin">/</span> Lazienki Park</h4>
+            <p class="tl-body">Da maggio a settembre, <strong>ogni domenica a mezzogiorno</strong>: concerto Chopin <strong>gratuito</strong> al Lazienki Park.</p>
+            <span class="tl-tag">GRATIS</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">13:00 → volo</span>
+            <h4 class="tl-title">Tempo libero <span class="pin">/</span> fino alla partenza</h4>
+            <p class="tl-body">Salvatore parte la mattina presto, Martina e Lorenzo/Giacomo entro pranzo. Chi vola <strong>dalle 18:00 in poi</strong> (Stefano, Alessandra, Daniele, Entissar, Alma, Davide, Massimo) ha tutto il pomeriggio: scegli uno dei <strong>3 itinerari pronti</strong> nella sezione Attività Extra.</p>
+            <span class="tl-tag alt">TEMPO LIBERO</span>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-time">Pomeriggio</span>
+            <h4 class="tl-title">Cosa vedere</h4>
+            <p class="tl-body">Lista completa dei suggerimenti in <strong>"Attività Extra"</strong>: Royal Castle, Wilanów, Polin, Uprising Museum, Copernicus, Praga district… oppure segui uno dei <strong>3 itinerari</strong> già ottimizzati per tema e distanze.</p>
+            <span class="tl-tag alt">FREE TIME</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== VOLI =================== -->
+<section class="voli" id="voli">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 02</span>
+      <h2 class="section-title">Voli <span class="ac">&amp; transfer</span></h2>
+      <span class="section-meta">Arrivi · partenze · WAW Chopin &amp; WMI Modlin</span>
+    </div>
+
+    <div class="editable-note reveal">
+      <b>★ Tocca un nome</b> per evidenziare i suoi voli. Orari locali. Ricontrolla sempre orario e gate sull'app della compagnia il giorno del volo.
+    </div>
+
+    <div class="pax-filter reveal" id="paxFilter">
+      <button class="chip active" data-pax="all">★ Tutti</button>
+      <button class="chip" data-pax="davide">Davide</button>
+      <button class="chip" data-pax="entissar">Entissar</button>
+      <button class="chip" data-pax="stefano">Stefano</button>
+      <button class="chip" data-pax="alessandra">Alessandra</button>
+      <button class="chip" data-pax="daniele">Daniele</button>
+      <button class="chip" data-pax="lorenzo">Lorenzo</button>
+      <button class="chip" data-pax="massimo">Massimo</button>
+      <button class="chip" data-pax="martina">Martina</button>
+      <button class="chip" data-pax="alma">Alma</button>
+      <button class="chip" data-pax="salvatore">Salvatore</button>
+      <button class="chip" data-pax="giacomo">Giacomo</button>
+    </div>
+
+    <div class="voli-section reveal">
+      <h3><span class="arrow">↓</span> Arrivi · Venerdì 19 Giu</h3>
+      <div class="flight-grid">
+
+        <article class="flight-card" data-pax="lorenzo giacomo">
+          <div class="stamp">FLIGHT 01</div>
+          <div class="flight-route">
+            <div class="port">BLQ<small>Bologna</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WMI<small>Modlin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 1943</span>
+            <span class="pill">DEP 07:00</span>
+            <span class="pill">ARR 09:00</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Lorenzo · Giacomo
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="entissar">
+          <div class="stamp">FLIGHT 02</div>
+          <div class="flight-route">
+            <div class="port">MXP<small>Malpensa</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WAW<small>Chopin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Rif.</b> BU1PXB</span>
+            <span class="pill">DEP 07:00</span>
+            <span class="pill">ARR 08:45</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Entissar
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="salvatore">
+          <div class="stamp">FLIGHT 03</div>
+          <div class="flight-route">
+            <div class="port">MXP<small>Malpensa</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WAW<small>Chopin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Wizz Air</b> · W4 6387</span>
+            <span class="pill">DEP 07:00</span>
+            <span class="pill">ARR 09:10</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Salvatore
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="stefano alessandra daniele">
+          <div class="stamp">FLIGHT 04</div>
+          <div class="flight-route">
+            <div class="port">BGY<small>Bergamo</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WAW<small>Chopin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Wizz Air</b> · W6 1432</span>
+            <span class="pill">DEP 08:40</span>
+            <span class="pill">ARR 10:40</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Stefano · Alessandra · Daniele
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="alma">
+          <div class="stamp">FLIGHT 05</div>
+          <div class="flight-route">
+            <div class="port">CIA<small>Roma Ciampino</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WMI<small>Modlin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 3865</span>
+            <span class="pill">DEP 08:50</span>
+            <span class="pill">ARR 11:05</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Alma
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="massimo">
+          <div class="stamp">FLIGHT 06</div>
+          <div class="flight-route">
+            <div class="port">ZRH<small>Zurigo</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WAW<small>Chopin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Swiss</b> · LX 1348</span>
+            <span class="pill">DEP 12:10</span>
+            <span class="pill">ARR 14:05</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Massimo
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="davide martina">
+          <div class="stamp">FLIGHT 07</div>
+          <div class="flight-route">
+            <div class="port">BGY<small>Bergamo</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">WMI<small>Modlin</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 1903</span>
+            <span class="pill">DEP 15:05</span>
+            <span class="pill">ARR 17:05</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Davide (coordinatore) · Martina
+            <small>Il coordinatore arriva con questo volo: chi atterra prima si organizza in autonomia</small>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="voli-section dep reveal">
+      <h3><span class="arrow">↑</span> Partenze · Domenica 21 Giu</h3>
+      <div class="flight-grid">
+
+        <article class="flight-card" data-pax="salvatore">
+          <div class="stamp dep">FLIGHT 01</div>
+          <div class="flight-route">
+            <div class="port">WAW<small>Chopin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">MXP<small>Malpensa</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Wizz Air</b> · W4 6388</span>
+            <span class="pill">DEP 09:45</span>
+            <span class="pill">ARR 12:00</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Salvatore
+            <small>Prima partenza del gruppo: saluti al sabato sera!</small>
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="martina">
+          <div class="stamp dep">FLIGHT 02</div>
+          <div class="flight-route">
+            <div class="port">WMI<small>Modlin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">MXP<small>Malpensa</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 5820</span>
+            <span class="pill">DEP 12:45</span>
+            <span class="pill">ARR 15:05</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Martina
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="lorenzo giacomo">
+          <div class="stamp dep">FLIGHT 03</div>
+          <div class="flight-route">
+            <div class="port">WMI<small>Modlin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">BLQ<small>Bologna</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 1942</span>
+            <span class="pill">DEP 14:15</span>
+            <span class="pill">ARR 16:10</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Lorenzo · Giacomo
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="stefano alessandra daniele entissar">
+          <div class="stamp dep">FLIGHT 04</div>
+          <div class="flight-route">
+            <div class="port">WAW<small>Chopin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">BGY<small>Bergamo</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Wizz Air</b> · W6 1433</span>
+            <span class="pill">DEP 18:00</span>
+            <span class="pill">ARR 20:05</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Stefano · Alessandra · Daniele · Entissar
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="alma">
+          <div class="stamp dep">FLIGHT 05</div>
+          <div class="flight-route">
+            <div class="port">WMI<small>Modlin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">CIA<small>Roma Ciampino</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 3866</span>
+            <span class="pill">DEP 18:05</span>
+            <span class="pill">ARR 20:20</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Alma
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="davide">
+          <div class="stamp dep">FLIGHT 06</div>
+          <div class="flight-route">
+            <div class="port">WMI<small>Modlin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">BGY<small>Bergamo</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Ryanair</b> · FR 3340</span>
+            <span class="pill">DEP 19:20</span>
+            <span class="pill">ARR 21:25</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Davide (coordinatore)
+          </div>
+        </article>
+
+        <article class="flight-card" data-pax="massimo">
+          <div class="stamp dep">FLIGHT 07</div>
+          <div class="flight-route">
+            <div class="port">WAW<small>Chopin</small></div>
+            <div class="arrow-line">→</div>
+            <div class="port">ZRH<small>Zurigo</small></div>
+          </div>
+          <div class="flight-meta">
+            <span><b>Swiss</b> · LX 1353</span>
+            <span class="pill">DEP 19:40</span>
+            <span class="pill">ARR 21:40</span>
+          </div>
+          <div class="flight-pax">
+            <b>A bordo</b>
+            Massimo
+            <small>Ultimo a partire: chiude lui il weekend</small>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== ROOMING / GRUPPO =================== -->
+<section class="rooming" id="rooming">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 03</span>
+      <h2 class="section-title">Il <span class="yl">gruppo</span></h2>
+      <span class="section-meta">11 WeRoaders · A&amp;O Warsaw Wola</span>
+    </div>
+
+    <!-- TBD banner -->
+    <div class="tbd-banner reveal">
+      <div class="tbd-mark">⏱</div>
+      <div class="tbd-body">
+        <h4>Camere non ancora assegnate</h4>
+        <p>La <strong>A&amp;O Warsaw Wola</strong> comunica gli abbinamenti delle stanze al check-in (dalle 15:00 di venerdì). Le tipologie saranno <strong>doppie / triple / quadruple</strong>, tutte con bagno privato. Appena ho la disposizione ufficiale, aggiorno la pagina con i numeri di stanza e le combinazioni.</p>
+      </div>
+      <div class="tbd-meta">STATUS · TBD</div>
+    </div>
+
+    <!-- Group stats -->
+    <div class="group-stats reveal">
+      <div class="group-stat">
+        <span class="num">11</span>
+        <span class="lab">WeRoaders</span>
+      </div>
+      <div class="group-stat">
+        <span class="num">5</span>
+        <span class="lab">First WeRoad</span>
+      </div>
+      <div class="group-stat">
+        <span class="num">4</span>
+        <span class="lab">Returning · 2+</span>
+      </div>
+      <div class="group-stat">
+        <span class="num">~30</span>
+        <span class="lab">Età media</span>
+      </div>
+    </div>
+
+    <!-- Roster compatto -->
+    <ul class="roster reveal">
+      <li class="roster-row coord">
+        <span class="r-no">01</span>
+        <span class="r-name">Davide Janiri <em>28 · Monza</em></span>
+        <span class="r-badge tp">★ Coordinatore · 12°</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">02</span>
+        <span class="r-name">Stefano Comunale <em>31</em></span>
+        <span class="r-badge first">★ 1° WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">03</span>
+        <span class="r-name">Entissar Chaouachi <em>27</em></span>
+        <span class="r-badge first">★ 1° WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">04</span>
+        <span class="r-name">Alessandra Angelicola <em>23</em></span>
+        <span class="r-badge first">★ 1° WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">05</span>
+        <span class="r-name">Daniele Moscatelli <em>33</em></span>
+        <span class="r-badge vet2">★ 2 WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">06</span>
+        <span class="r-name">Lorenzo Gilioli <em>32</em></span>
+        <span class="r-badge first">★ 1° WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">07</span>
+        <span class="r-name">Massimo Callisto <em>34</em></span>
+        <span class="r-badge vet2">★ 2 WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">08</span>
+        <span class="r-name">Martina Politi <em>29</em></span>
+        <span class="r-badge vet2">★ 2 WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">09</span>
+        <span class="r-name">Alma Targa <em>33</em></span>
+        <span class="r-badge first">★ 1° WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">10</span>
+        <span class="r-name">Salvatore Cotena <em>31</em></span>
+        <span class="r-badge vet3">★ 3 WeRoad</span>
+      </li>
+      <li class="roster-row">
+        <span class="r-no">11</span>
+        <span class="r-name">Giacomo Landini <em>29</em></span>
+        <span class="r-badge new">★ New entry</span>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- =================== MAPPA =================== -->
+<section class="mappa" id="mappa">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 04</span>
+      <h2 class="section-title">La <span class="ac">mappa</span></h2>
+      <span class="section-meta">11 spot · 1 fiume · 4 quartieri</span>
+    </div>
+
+    <div class="map-wrap reveal">
+
+      <div class="map-svg-box">
+        <svg class="map-svg" viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-label="Mappa schematica di Varsavia">
+          <g class="grid">
+            <line x1="0" y1="80" x2="800" y2="80"/>
+            <line x1="0" y1="160" x2="800" y2="160"/>
+            <line x1="0" y1="240" x2="800" y2="240"/>
+            <line x1="0" y1="320" x2="800" y2="320"/>
+            <line x1="0" y1="400" x2="800" y2="400"/>
+            <line x1="0" y1="480" x2="800" y2="480"/>
+            <line x1="100" y1="0" x2="100" y2="560"/>
+            <line x1="200" y1="0" x2="200" y2="560"/>
+            <line x1="300" y1="0" x2="300" y2="560"/>
+            <line x1="400" y1="0" x2="400" y2="560"/>
+            <line x1="500" y1="0" x2="500" y2="560"/>
+            <line x1="600" y1="0" x2="600" y2="560"/>
+            <line x1="700" y1="0" x2="700" y2="560"/>
+          </g>
+
+          <rect class="district" x="50"  y="200" width="220" height="200"/>
+          <rect class="district" x="270" y="100" width="240" height="280"/>
+          <rect class="district" x="510" y="60"  width="150" height="200"/>
+          <rect class="district" x="510" y="260" width="240" height="180"/>
+          <rect class="district" x="270" y="380" width="240" height="160"/>
+
+          <text class="district-label" x="160" y="225" text-anchor="middle">WOLA</text>
+          <text class="district-label" x="390" y="125" text-anchor="middle">SRÓDMIESCIE</text>
+          <text class="district-label" x="585" y="85"  text-anchor="middle">STARE MIASTO</text>
+          <text class="district-label" x="630" y="285" text-anchor="middle">PRAGA</text>
+          <text class="district-label" x="390" y="405" text-anchor="middle">MOKOTÓW</text>
+
+          <path class="vistula" d="M 540 0 C 520 140, 560 240, 510 360 S 470 540, 530 580"/>
+          <path class="vistula-line" d="M 540 0 C 520 140, 560 240, 510 360 S 470 540, 530 580"/>
+          <text class="river-label" x="572" y="180" transform="rotate(75 572 180)">WISŁA</text>
+
+          <g transform="translate(740 60)">
+            <line class="compass-tick" x1="0" y1="-22" x2="0" y2="22"/>
+            <line class="compass-tick" x1="-18" y1="0" x2="18" y2="0"/>
+            <text class="compass" x="0" y="-28" text-anchor="middle">N</text>
+            <text class="compass" x="0" y="42" text-anchor="middle" style="font-size:13px; opacity:.5">S</text>
+          </g>
+
+          <text class="district-label" x="20" y="540" style="opacity:.4">52°13'N · 21°02'E · WAW</text>
+
+          <g class="pin hot" data-pin="1"><rect x="120" y="280" width="38" height="28"/><text x="139" y="299">01</text></g>
+          <g class="pin" data-pin="2"><rect x="370" y="240" width="38" height="28"/><text x="389" y="259">02</text></g>
+          <g class="pin" data-pin="3"><rect x="310" y="190" width="38" height="28"/><text x="329" y="209">03</text></g>
+          <g class="pin" data-pin="4"><rect x="200" y="200" width="38" height="28"/><text x="219" y="219">04</text></g>
+          <g class="pin" data-pin="5"><rect x="540" y="120" width="38" height="28"/><text x="559" y="139">05</text></g>
+          <g class="pin" data-pin="6"><rect x="440" y="170" width="38" height="28"/><text x="459" y="189">06</text></g>
+          <g class="pin" data-pin="7"><rect x="610" y="310" width="38" height="28"/><text x="629" y="329">07</text></g>
+          <g class="pin" data-pin="8"><rect x="370" y="450" width="38" height="28"/><text x="389" y="469">08</text></g>
+          <g class="pin" data-pin="9"><rect x="450" y="510" width="38" height="28"/><text x="469" y="529">09</text></g>
+          <g class="pin" data-pin="10"><rect x="380" y="80" width="38" height="28"/><text x="399" y="99">10</text></g>
+          <g class="pin" data-pin="11"><rect x="80" y="320" width="38" height="28"/><text x="99" y="339">11</text></g>
+
+        </svg>
+      </div>
+
+      <div class="map-legend">
+        <h3>Legenda</h3>
+        <ol>
+          <li class="hot" data-pin="1"><a href="https://maps.google.com/?q=A%26O+Hostel+Warszawa+Wola" target="_blank" rel="noopener"><span class="leg-body">A&amp;O Warsaw Wola <small>★ Hotel · Wola · tocca per Maps</small></span></a></li>
+          <li data-pin="2"><a href="https://maps.google.com/?q=Palac+Kultury+i+Nauki+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Palazzo della Cultura <small>Skyline · Day 1 19:00</small></span></a></li>
+          <li data-pin="3"><a href="https://maps.google.com/?q=Varso+Tower+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Varso Tower (Highline) <small>Vista &amp; rooftop</small></span></a></li>
+          <li data-pin="4"><a href="https://maps.google.com/?q=Fabryka+Norblina+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Fabryka Norblina <small>Food hall · pranzo Day 2</small></span></a></li>
+          <li data-pin="5"><a href="https://maps.google.com/?q=Stare+Miasto+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Stare Miasto (Old Town) <small>Welcome dinner · Royal Castle</small></span></a></li>
+          <li data-pin="6"><a href="https://maps.google.com/?q=Mazowiecka+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Mazowiecka <small>Czupito · Mazo · Teatro Cubano · Moon</small></span></a></li>
+          <li data-pin="7"><a href="https://maps.google.com/?q=Polish+Vodka+Museum+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Vodka Museum <small>Day 2 · pomeriggio · doc obbligatorio</small></span></a></li>
+          <li data-pin="8"><a href="https://maps.google.com/?q=Lazienki+Park+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Lazienki Park <small>Chopin gratis · domenica 12:00</small></span></a></li>
+          <li data-pin="9"><a href="https://maps.google.com/?q=Wilanow+Palace" target="_blank" rel="noopener"><span class="leg-body">Wilanów Palace <small>Day 3 · opzionale</small></span></a></li>
+          <li data-pin="10"><a href="https://maps.google.com/?q=POLIN+Museum+Warszawa" target="_blank" rel="noopener"><span class="leg-body">Polin Museum <small>Storia ebrei polacchi</small></span></a></li>
+          <li data-pin="11"><a href="https://maps.google.com/?q=Warsaw+Uprising+Museum" target="_blank" rel="noopener"><span class="leg-body">Warsaw Uprising Museum <small>Day 3 · opzionale</small></span></a></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== TRASPORTI =================== -->
+<section class="trasporti" id="trasporti">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 05</span>
+      <h2 class="section-title">Come <span class="yl">spostarsi</span></h2>
+      <span class="section-meta">Dall'aeroporto · in città · di notte</span>
+    </div>
+
+    <div class="trans-grid">
+
+      <div class="trans-card reveal">
+        <span class="lab">001 · AEROPORTO → HOTEL</span>
+        <h4>WAW <span class="ac">→</span> Wola</h4>
+        <p class="who-line"><small>Chi atterra e riparte qui · andata e ritorno</small>Stefano · Alessandra · Daniele · Entissar · Salvatore · Massimo</p>
+        <p>Da <strong>Chopin (WAW)</strong> al centro in <strong>~30 minuti</strong>. Opzioni:</p>
+        <p>★ <strong>Uber</strong>: 50–80 PLN (€15–20, max €25). <strong>Mai</strong> taxi normali fuori dall'aeroporto.</p>
+        <p>★ Treno <strong>SKM S2/S3</strong> o autobus <strong>175</strong> verso il centro, poi metro M2 fino a Rondo Daszyńskiego.</p>
+        <span class="price">Uber ~€18</span>
+        <span class="price">SKM 4,40 PLN</span>
+      </div>
+
+      <div class="trans-card reveal delay-1">
+        <span class="lab">002 · MODLIN → CITTÀ</span>
+        <h4>WMI <span class="ac">→</span> Centro</h4>
+        <p class="who-line"><small>Chi atterra e riparte qui · andata e ritorno</small>Davide · Martina · Lorenzo · Giacomo · Alma</p>
+        <p>Da <strong>Modlin (WMI)</strong> ~40 km dal centro. Opzioni:</p>
+        <p>★ <strong>Modlinbus</strong> (~€10, 50 min) fino a Warszawa Centralna. Biglietti su modlinbus.pl, comprali prima.</p>
+        <p>★ Treno <strong>KM</strong> + cambio: più lungo, sconsigliato di sera.</p>
+        <span class="price">Modlinbus ~€10</span>
+        <span class="price">~50 min</span>
+      </div>
+
+      <div class="trans-card reveal delay-2">
+        <span class="lab">003 · TAXI &amp; RIDE</span>
+        <h4>Solo <span class="ac">Uber</span></h4>
+        <p>Mai prendere un taxi per strada o davanti all'aeroporto: <strong>spillano i turisti</strong>. Solo Uber, prezzo fisso e tracciato.</p>
+        <p>★ Almeno <strong>3 persone</strong> del gruppo devono avere l'app installata e funzionante prima di partire.</p>
+        <p>★ Carta Revolut già impostata come metodo di pagamento.</p>
+        <div class="warn-line">⚠ Bolt funziona ma meno coperto · Free Now non esiste</div>
+      </div>
+
+      <div class="trans-card reveal delay-3">
+        <span class="lab">004 · METRO &amp; TRAM</span>
+        <h4>Tram <span class="ac">&gt;</span> Metro</h4>
+        <p>Varsavia ha solo <strong>due linee metro</strong>; i <strong>tram</strong> coprono tutto e sono puntuali. Comprate i biglietti alle macchinette nelle fermate.</p>
+        <div class="metro-lines">
+          <div class="badge-m m1">M1</div>
+          <span><b>N – S</b> · Centro ↔ Lazienki Park &amp; quartieri sud</span>
+          <div class="badge-m m2">M2</div>
+          <span><b>E – O</b> · Praga ↔ Centro ↔ Wola (la tua linea)</span>
+        </div>
+      </div>
+
+      <div class="trans-card reveal delay-4">
+        <span class="lab">005 · BIGLIETTI</span>
+        <h4>Group <span class="ac">Weekend</span></h4>
+        <p>Biglietto <strong>weekend di gruppo</strong> (max 5 persone, valido sab–dom): <strong>40 PLN</strong>. Conviene comprarne 3 per coprire tutto il gruppo.</p>
+        <p>Singolo viaggio: 4,40 PLN (20 min) o 6,40 PLN (75 min).</p>
+        <div class="warn-line">⚠ <b>Valida</b> sempre il biglietto a bordo o all'ingresso metro. Multa salata per i turisti non in regola.</div>
+      </div>
+
+      <div class="trans-card reveal delay-5">
+        <span class="lab">006 · DI NOTTE</span>
+        <h4>Notturno <span class="ac">Uber</span></h4>
+        <p>I tram e metro chiudono intorno alle <strong>23:00</strong>. Dopo: solo Uber.</p>
+        <p>Da Mazowiecka all'hotel A&amp;O Wola: <strong>~25–40 PLN</strong> (€6–10). Dividi in 3–4 persone: una scocciatura in meno e zero rischi.</p>
+        <p>★ Punto di raccolta consigliato: fuori dal McDonald's all'angolo, c'è sempre segnale GPS.</p>
+        <span class="price">Notturno €6–10</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== INFO PRATICHE =================== -->
+<section class="info" id="info">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 06</span>
+      <h2 class="section-title">Info <span class="yl">pratiche</span></h2>
+      <span class="section-meta">Tutto quello che ti serve · subito</span>
+    </div>
+
+    <div class="sos-strip reveal" id="sos">
+      <a class="sos-btn danger" href="tel:112">
+        <b>112</b>
+        <span>Emergenze UE · chiama</span>
+      </a>
+      <a class="sos-btn" href="tel:+48226356314">
+        <b>Podwale 25</b>
+        <span>Ristorante Day 1 · chiama</span>
+      </a>
+      <a class="sos-btn" href="https://maps.google.com/?q=A%26O+Hostel+Warszawa+Wola" target="_blank" rel="noopener">
+        <b>Hotel A&amp;O</b>
+        <span>Wola · apri in Maps</span>
+      </a>
+    </div>
+
+    <div class="info-grid">
+
+      <article class="info-card reveal">
+        <span class="corner">001</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="0"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg>
+        </div>
+        <h4>Pagamenti</h4>
+        <p>Non serve cambiare contanti. <strong>Carta ovunque</strong>. Consigliata carta <strong>Revolut virtuale</strong> (zero commissioni). Distributore Revolut fisico all'aeroporto di Malpensa.</p>
+      </article>
+
+      <article class="info-card reveal delay-1">
+        <span class="corner">002</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5h4.5a2 2 0 0 1 0 4H9m0 0h5a2 2 0 0 1 0 4H9"/></svg>
+        </div>
+        <h4>Cassa Comune</h4>
+        <p><strong>€50 a testa, coordinatore incluso</strong>, da versare a Davide su Revolut prima della partenza.</p>
+        <p>La Cassa Comune è la cassa del gruppo: viene <strong>raccolta e gestita dal coordinatore</strong>, che ne è responsabile per tutta la durata del viaggio. Copre le spese di gruppo: trasporti pubblici, walking tour guidato ed eventuali extra decisi insieme.</p>
+      </article>
+
+      <article class="info-card reveal delay-2">
+        <span class="corner">003</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-5h6v5"/></svg>
+        </div>
+        <h4>Hotel</h4>
+        <p><strong>A&amp;O Warsaw Wola</strong> — quartiere Wola, vicino metro. Check-in dalle 15:00, check-out entro le 10:00.</p>
+      </article>
+
+      <article class="info-card reveal delay-3">
+        <span class="corner">004</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="0"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+        </div>
+        <h4>Documenti</h4>
+        <p><strong>Carta d'identità valida per espatrio</strong> o passaporto. Serve anche al <strong>Vodka Museum</strong> (controllano all'ingresso). Tieni una foto del documento sul telefono.</p>
+      </article>
+
+      <article class="info-card reveal delay-4">
+        <span class="corner">005</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 12 8 12s8-6.5 8-12a8 8 0 0 0-8-8z"/></svg>
+        </div>
+        <h4>Quartieri</h4>
+        <p><strong>Stare Miasto</strong> = storico/turistico. <strong>Śródmieście/Wola/Praga</strong> = moderno, bar, locali notturni. La vera Varsavia vive di notte.</p>
+      </article>
+
+      <article class="info-card reveal delay-5">
+        <span class="corner">006</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h4>Meteo Giugno</h4>
+        <p>Giugno a Varsavia: <strong>14–24°C</strong>. Tramonto tardissimo (~21:15). Possibili acquazzoni serali. <strong>Una felpa</strong> + giacca antipioggia leggera.</p>
+      </article>
+
+      <article class="info-card reveal delay-6">
+        <span class="corner">007</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v18M17 3v18M3 7h4M3 17h4M17 7h4M17 17h4M3 12h18"/></svg>
+        </div>
+        <h4>Lingua</h4>
+        <p>Polacco difficile. Sotto i 35 anni <strong>quasi tutti parlano inglese</strong>. "Dzień dobry" = buongiorno, "dziękuję" = grazie. Funziona anche solo sorridere.</p>
+      </article>
+
+      <article class="info-card reveal delay-6">
+        <span class="corner">008</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h14v18H5z"/><path d="M9 3v18M15 3v18"/><circle cx="12" cy="14" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <h4>Spine elettriche</h4>
+        <p>Polonia usa prese <strong>tipo C/E</strong>, compatibili con quelle italiane. <strong>Nessun adattatore necessario</strong>. 230V, 50Hz.</p>
+      </article>
+
+      <article class="info-card reveal delay-6">
+        <span class="corner">009</span>
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h13M13 3l4 4-4 4M20 17H7M11 13l-4 4 4 4"/></svg>
+        </div>
+        <h4>Quanto costa? PLN → €</h4>
+        <div class="conv-chips">
+          <button class="conv-chip" type="button" data-v="40">40 · ticket weekend</button>
+          <button class="conv-chip" type="button" data-v="80">80 · uber aeroporto</button>
+          <button class="conv-chip" type="button" data-v="165">165 · menu Podwale</button>
+        </div>
+        <div class="conv">
+          <input type="number" id="plnInput" inputmode="decimal" min="0" value="100" aria-label="Importo in złoty">
+          <div class="conv-eq" id="convOut">≈ € 23,40</div>
+        </div>
+        <p>Tasso indicativo <strong>1 € ≈ 4,27 PLN</strong>. Regola veloce: dividi per 4 e arrotonda in giù.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== LE SERATE =================== -->
+<section class="serate" id="serate">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 07</span>
+      <h2 class="section-title">Le <span class="ac">serate</span></h2>
+      <span class="section-meta">2 notti · 1 strada · Mazowiecka</span>
+    </div>
+
+    <div class="nights">
+
+      <!-- NIGHT 1 -->
+      <div class="night-col reveal">
+        <div class="night-head">
+          <span class="label">VENERDÌ 19 GIU · NOTTE 01</span>
+          <span class="big-tag">★ APERTURA</span>
+          <h3>La prima <span class="ac">notte</span></h3>
+        </div>
+
+        <ol class="night-flow">
+          <li class="night-step">
+            <span class="step-time">~23:00</span>
+            <div>
+              <h5>Uscita da Podwale 25</h5>
+              <p>Fine welcome dinner in Old Town. Uber di gruppo verso <strong>Mazowiecka</strong> — la strada della nightlife. Tragitto ~10 min, ~25 PLN diviso in 3-4 macchine.</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">23:30</span>
+            <div>
+              <h5>Czupito Shot Bar</h5>
+              <p>Warm-up obbligatorio. <strong>Shot unici e deliziosi</strong> a basso costo, atmosfera chiassosa. Apertura ufficiale del weekend con un brindisi tutti insieme.</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">00:30+</span>
+            <div>
+              <h5>Zagrywki Activity Bar</h5>
+              <p>Tre piani di giochi: <strong>beer pong</strong>, biliardo, e al piano -1 il <strong>minigolf spaziale</strong> (il pezzo forte). I box vanno prenotati in anticipo su <strong>zagrywki.pl</strong> usando la Cassa Comune.</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">02:30+</span>
+            <div>
+              <h5>A casa o si continua</h5>
+              <p>Chi vuole rientra in hotel (Uber dalla piazza Mazowiecka, ~30 PLN). Chi resta può chiudere la serata al <strong>Mazo Bar</strong> (nessun ingresso, musica fino tardi) o tornare al Czupito.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="night-foot">★ Minigolf e box giochi si prenotano in anticipo su zagrywki.pl — si paga con la Cassa Comune</div>
+      </div>
+
+      <!-- NIGHT 2 -->
+      <div class="night-col big reveal delay-1">
+        <div class="night-head">
+          <span class="label">SABATO 20 GIU · NOTTE 02</span>
+          <span class="big-tag">★ BIG NIGHT</span>
+          <h3>La notte <span class="yl">grossa</span></h3>
+        </div>
+
+        <ol class="night-flow">
+          <li class="night-step">
+            <span class="step-time">~22:30</span>
+            <div>
+              <h5>Cambio outfit in hotel</h5>
+              <p>Dopo cena al Setki Powodów, rientro veloce all'A&amp;O Wola per cambiare outfit. ⚠ <strong>TOTAL BLACK</strong> obbligatorio se andiamo al Moon (vietati anche loghi colorati).</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">23:30</span>
+            <div>
+              <h5>Pre-game su Mazowiecka</h5>
+              <p>Stop volante al <strong>Mazo Bar</strong> (musica, no ingresso, no fila) per scaldare l'atmosfera. Oppure replica del <strong>Czupito</strong> per chi ha bisogno di un altro shot rituale.</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">00:30</span>
+            <div>
+              <h5>Teatro Cubano · Big Night</h5>
+              <p>Il club più amato dai gruppi WeRoad a Varsavia. Fila lunga il sabato: arrivare entro le 00:30 o prenotare tavolo in anticipo. Atmosfera latina, ballano tutti.</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">Alternativa</span>
+            <div>
+              <h5>Sen + Moon (rooftop + club)</h5>
+              <p>Plan B per chi vuole rooftop con vista skyline + club techno. <strong>Total black tassativo</strong>, selezione all'ingresso. Decisione di gruppo a cena.</p>
+            </div>
+          </li>
+          <li class="night-step">
+            <span class="step-time">→ ∞</span>
+            <div>
+              <h5>Chiusura</h5>
+              <p>Fino a quando reggiamo. Domenica è giorno libero — chi se la sente fa nottata. Rientri scaglionati in Uber.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="night-foot warn">⚠ Dress code Moon: total black, niente loghi colorati. Decidere a cena dove andiamo</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== DA NON PERDERE =================== -->
+<section class="spots" id="spots">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 08</span>
+      <h2 class="section-title">Da non <span class="ac">perdere</span></h2>
+      <span class="section-meta">7 spot · 1 weekend · tu decidi</span>
+    </div>
+
+    <div class="spots-grid">
+
+      <article class="spot-card reveal">
+        <span class="spot-type">View · Skyscraper</span>
+        <h4>Varso Tower<br>Highline</h4>
+        <p>Lo skyscraper più alto d'Europa. La vista <strong>migliore</strong> del Palazzo della Cultura. Biglietti online più economici.</p>
+        <div class="extra">→ da ~89 PLN online (€21) a testa</div>
+      </article>
+
+      <article class="spot-card reveal delay-1">
+        <span class="spot-type">Bar · Shot</span>
+        <h4>Czupito<br>Shot Bar</h4>
+        <p>Mazowiecka. Shot unici e deliziosi. <strong>Apertura serata obbligatoria</strong> — è il rito.</p>
+        <div class="extra">→ shot ~10–15 PLN (€2–3) l'uno</div>
+      </article>
+
+      <article class="spot-card reveal delay-2">
+        <span class="spot-type">Activity · Games</span>
+        <h4>Zagrywki<br>Activity Bar</h4>
+        <p>3 piani: beer pong, biliardo, <strong>minigolf spaziale</strong> al piano -1. Prenotare in anticipo su zagrywki.pl.</p>
+        <div class="extra">→ box giochi ~30–50 PLN (€7–12) a testa</div>
+      </article>
+
+      <article class="spot-card reveal delay-3">
+        <span class="spot-type">Nightclub · Big Night</span>
+        <h4>Teatro<br>Cubano</h4>
+        <p><strong>Il</strong> nightclub. Sabato sera. Arrivo ~23:00 o prenotazione tavolo. Non c'è giorno migliore.</p>
+        <div class="extra">→ ingresso ~40–60 PLN (€10–14) a testa</div>
+      </article>
+
+      <article class="spot-card reveal delay-4">
+        <span class="spot-type">Bar · Chill</span>
+        <h4>Mazo<br>Bar</h4>
+        <p>Mazowiecka. Musica, <strong>nessun ingresso</strong>. Serata rilassata. Perfetto per "una e poi andiamo".</p>
+        <div class="extra">→ free entry · drink ~25–35 PLN (€6–8)</div>
+      </article>
+
+      <article class="spot-card reveal delay-5">
+        <span class="spot-type">Museum · Vintage</span>
+        <h4>Interactive<br>Pinball Museum</h4>
+        <p>Ingresso fisso <strong>~8€</strong>, poi giochi liberi. Vintage + drink. Un'oretta volata.</p>
+        <div class="extra">→ ~45 PLN (€10) a testa · gioco illimitato</div>
+      </article>
+
+      <article class="spot-card reveal delay-6">
+        <span class="spot-type">Rooftop · Club</span>
+        <h4>Sen /<br>Moon</h4>
+        <p>Rooftop + club. ⚠ <strong>Outfit total black obbligatorio</strong> (anche loghi colorati vietati). Selezione all'ingresso.</p>
+        <div class="extra">→ ingresso ~50–80 PLN (€12–19) · dress code black</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== ATTIVITÀ EXTRA =================== -->
+<section class="extra" id="extra">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 09</span>
+      <h2 class="section-title">Attività <span class="yl">extra</span></h2>
+      <span class="section-meta">Idee per Day 3 · giorno libero</span>
+    </div>
+
+    <div class="editable-note reveal" style="border-left-color: var(--cyan); background: rgba(0,240,194,0.05);">
+      <b style="color: var(--cyan);">★ Info:</b> queste sono attività opzionali per la domenica (Day 3). Decidiamo insieme a cena del sabato cosa fare in base al meteo e all'energia residua. Prezzi indicativi 2026. Qui sotto trovi <b style="color: var(--cyan);">3 itinerari già ottimizzati</b> per tema e distanze.
+    </div>
+
+    <div class="itin-grid">
+
+      <article class="itin-card reveal">
+        <div class="it-label">Itinerario A · Wola–Muranów</div>
+        <h4>Memoria '900</h4>
+        <p class="it-sub">La Varsavia del 1944, intensa e a zero spostamenti: tutto a piedi partendo dall'hotel.</p>
+        <ol class="itin-steps">
+          <li><span class="n">1</span><div><b>Warsaw Uprising Museum</b> · ~2h · 30 PLN<span class="leg">10 min a piedi dall'hotel</span></div></li>
+          <li><span class="n">2</span><div><b>Ghetto Memorial Walk</b> · ~45 min · gratis<span class="leg">20 min a piedi verso Muranów · monumento + Umschlagplatz</span></div></li>
+          <li><span class="n">3</span><div><b>Polin Museum</b> · ~2,5h · 45 PLN<span class="leg">5 min a piedi · domenica aperto</span></div></li>
+        </ol>
+        <div class="itin-meta">
+          <span class="x-tag day">~5–6 H</span>
+          <span class="x-tag cost">~75 PLN · €18</span>
+          <span class="x-tag cult">0 MEZZI · TUTTO A PIEDI</span>
+        </div>
+      </article>
+
+      <article class="itin-card b reveal delay-1">
+        <div class="it-label">Itinerario B · asse reale sud–centro</div>
+        <h4>Royal &amp; Chopin</h4>
+        <p class="it-sub">La Varsavia classica lungo la Royal Route, col concerto gratuito della domenica.</p>
+        <ol class="itin-steps">
+          <li><span class="n">1</span><div><b>Brunch da Charlotte</b> · ~45 PLN<span class="leg">Nowy Świat · ore 10:30 · arriva presto, c'è fila</span></div></li>
+          <li><span class="n">2</span><div><b>Lazienki Park + Chopin live</b> · gratis<span class="leg">Tram ~10 min · concerto ore 12:00 in punto</span></div></li>
+          <li><span class="n">3</span><div><b>Royal Castle · Stare Miasto</b> · ~1,5h · 40 PLN<span class="leg">Bus 116/180 lungo la Royal Route · ~20 min</span></div></li>
+        </ol>
+        <div class="itin-meta">
+          <span class="x-tag day">~5 H</span>
+          <span class="x-tag cost">~85 PLN · €20</span>
+          <span class="x-tag cult">RELAX · CLASSICO</span>
+        </div>
+      </article>
+
+      <article class="itin-card c reveal delay-2">
+        <div class="it-label">Itinerario C · centro–Powiśle–Praga</div>
+        <h4>Skyline &amp; Praga</h4>
+        <p class="it-sub">La Varsavia nuova: vista dall'alto, food hall sul fiume e street art oltre la Vistola.</p>
+        <ol class="itin-steps">
+          <li><span class="n">1</span><div><b>Varso Tower Highline</b> · ~1h · da 89 PLN<span class="leg">15 min a piedi dall'hotel · biglietto online</span></div></li>
+          <li><span class="n">2</span><div><b>Pranzo a Elektrownia Powiśle</b> · ~50–70 PLN<span class="leg">M2 fino a Centrum Nauki Kopernik · 10 min</span></div></li>
+          <li><span class="n">3</span><div><b>Praga district · street art</b> · ~1,5h · gratis<span class="leg">M2 oltre il fiume · ritorno in centro in 10 min</span></div></li>
+        </ol>
+        <div class="itin-meta">
+          <span class="x-tag day">~4,5 H</span>
+          <span class="x-tag cost">~150 PLN · €35</span>
+          <span class="x-tag cult">FOTO · MODERNO</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="extra-grid">
+
+      <article class="extra-card reveal">
+        <span class="num-corner">// 01</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">~40 PLN · €9</span>
+          <span class="x-tag cult">CULTURA</span>
+        </div>
+        <h4>Royal Castle<br>Castello Reale</h4>
+        <p>Residenza storica dei re polacchi nel cuore di <strong>Stare Miasto</strong>. Interni sontuosi, ricostruiti dopo la guerra. Visita ~1,5h. A pochi metri dal Podwale 25 dove abbiamo cenato venerdì.</p>
+      </article>
+
+      <article class="extra-card reveal delay-1">
+        <span class="num-corner">// 02</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">~45 PLN · €10</span>
+          <span class="x-tag cult">PALAZZO</span>
+        </div>
+        <h4>Wilanów<br>Palace</h4>
+        <p>La <strong>"Versailles polacca"</strong>. Residenza barocca di Re Jan III Sobieski + giardini meravigliosi (gratis). Fuori dal centro: 25 min in Uber. Bella combo per chi vuole un'oasi di verde dopo due notti di Mazowiecka.</p>
+      </article>
+
+      <article class="extra-card reveal delay-2">
+        <span class="num-corner">// 03</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">~45 PLN · €10</span>
+          <span class="x-tag warn">★ TOP</span>
+        </div>
+        <h4>Polin Museum<br>Storia ebraica</h4>
+        <p>Museo della <strong>storia degli ebrei polacchi</strong>. Uno dei migliori musei interattivi d'Europa, percorso emozionante e profondo. Allocare almeno 2,5h. ⚠ <strong>Chiuso il martedì</strong> (per noi domenica OK).</p>
+      </article>
+
+      <article class="extra-card reveal delay-3">
+        <span class="num-corner">// 04</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">~30 PLN · €7</span>
+          <span class="x-tag cult">STORIA</span>
+        </div>
+        <h4>Warsaw Uprising<br>Museum</h4>
+        <p>Dedicato all'<strong>insurrezione di Varsavia del 1944</strong>. Multimediale, toccante, non leggero. Per chi ama la storia del Novecento. Vale ~2h. Vicino alla stazione Centralna.</p>
+      </article>
+
+      <article class="extra-card reveal delay-4">
+        <span class="num-corner">// 05</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">~45 PLN · €10</span>
+          <span class="x-tag cult">SCIENCE</span>
+        </div>
+        <h4>Copernicus<br>Science Centre</h4>
+        <p>Museo della scienza <strong>completamente interattivo</strong>. Eccellente se piove o se hai bisogno di muoverti senza camminare per ore. Quartiere Powiśle, sul fiume Wisła. ~2h.</p>
+      </article>
+
+      <article class="extra-card reveal delay-5">
+        <span class="num-corner">// 06</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">GRATIS</span>
+          <span class="x-tag warn">★ DOMENICA</span>
+        </div>
+        <h4>Lazienki Park<br>+ Concerto Chopin</h4>
+        <p>Parco reale immenso, anatre e statue. <strong>Ogni domenica a mezzogiorno</strong> (mag-set): concerto di Chopin al pianoforte sotto la statua, <strong>completamente gratis</strong>. Perfetto modo di chiudere il weekend.</p>
+      </article>
+
+      <article class="extra-card reveal delay-6">
+        <span class="num-corner">// 07</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">GRATIS</span>
+          <span class="x-tag cult">STREET ART</span>
+        </div>
+        <h4>Praga District<br>Bohémien Side</h4>
+        <p>Il quartiere oltre la Vistola: <strong>ex industriale, murales, bar alternativi</strong>, atmosfera bohémien. Più "vera" e meno turistica di Stare Miasto. Passeggiata libera 2h, raggiungibile con metro M2.</p>
+      </article>
+
+      <article class="extra-card reveal delay-6">
+        <span class="num-corner">// 08</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">da 89 PLN · €21</span>
+          <span class="x-tag cult">SKYLINE</span>
+        </div>
+        <h4>Varso Tower<br>Highline</h4>
+        <p>Lo <strong>skyscraper più alto d'Europa</strong>. Terrazza panoramica con vista che batte il Palazzo della Cultura. Biglietti online <strong>nettamente più economici</strong>. ~1h.</p>
+      </article>
+
+      <article class="extra-card reveal delay-6">
+        <span class="num-corner">// 09</span>
+        <div class="x-tags">
+          <span class="x-tag day">DAY 3</span>
+          <span class="x-tag cost">GRATIS</span>
+          <span class="x-tag cult">MEMORY</span>
+        </div>
+        <h4>Ghetto<br>Memorial Walk</h4>
+        <p>Percorso autoguidato sui luoghi del <strong>Ghetto di Varsavia</strong>: monumento agli eroi, frammenti del muro originale, Umschlagplatz. Itinerario gratuito, app POLIN consigliata.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOD =================== -->
+<section class="food" id="food">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 10</span>
+      <h2 class="section-title">Cibo &amp; <span class="yl">food hall</span></h2>
+      <span class="section-meta">Mangia bene · sempre</span>
+    </div>
+
+    <div class="food-split">
+
+      <div class="food-col reveal">
+        <h3>Food Hall</h3>
+        <ul class="food-list">
+          <li class="food-item">
+            <div class="food-mark">F·01</div>
+            <div>
+              <h4>Fabryka Norblina</h4>
+              <p>Ex fabbrica d'argento, 10 min dall'hotel. Cucina internazionale e polacca. Anche museo interno.</p>
+              <span class="f-price">pasto ~50–70 PLN · €12–16 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">F·02</div>
+            <div>
+              <h4>Elektrownia Powiśle</h4>
+              <p>Ex centrale elettrica (chiusa nel 2001). <strong>La più cool</strong>: macchinari originali e bagni al piano -1 con contatori d'epoca.</p>
+              <span class="f-price">pasto ~50–70 PLN · €12–16 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">F·03</div>
+            <div>
+              <h4>Hala Koszyki</h4>
+              <p>Ex mercato coperto. Ampi spazi, tanti stand. Atmosfera vivace, scelta enorme.</p>
+              <span class="f-price">pasto ~45–65 PLN · €11–15 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">F·04</div>
+            <div>
+              <h4>Browary Warszawskie</h4>
+              <p>Food hall con <strong>birrifici artigianali</strong>. Per chi vuole bere bene mangiando.</p>
+              <span class="f-price">pasto + birra ~55–80 PLN · €13–19 a testa</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="food-col right reveal delay-2">
+        <h3>Ristoranti</h3>
+        <ul class="food-list">
+          <li class="food-item">
+            <div class="food-mark">R·01</div>
+            <div>
+              <h4>Podwale 25</h4>
+              <p>Old Town, cucina polacca tradizionale. <strong>Welcome dinner Day 1</strong>.</p>
+              <span class="f-price">menu incluso nel pacchetto · extra a parte</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">R·02</div>
+            <div>
+              <h4>Setki Powodów</h4>
+              <p>Bistro nel palazzo del Vodka Museum. <strong>Cena Day 2</strong>.</p>
+              <span class="f-price">cena ~90–130 PLN · €21–30 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">R·03</div>
+            <div>
+              <h4>Charlotte</h4>
+              <p>Brunch, Nowy Świat. Ottimo la <strong>domenica mattina</strong>.</p>
+              <span class="f-price">brunch ~40–55 PLN · €9–13 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">R·04</div>
+            <div>
+              <h4>Zapiecek</h4>
+              <p><strong>Pierogi</strong> e piatti tipici. Catena affidabile, sempre buono.</p>
+              <span class="f-price">pasto ~40–55 PLN · €9–13 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">R·05</div>
+            <div>
+              <h4>Gospoda Kwiaty Polskie</h4>
+              <p>Old Town. Buon cibo e atmosfera tipicamente polacca.</p>
+              <span class="f-price">cena ~70–100 PLN · €16–23 a testa</span>
+            </div>
+          </li>
+          <li class="food-item">
+            <div class="food-mark">R·06</div>
+            <div>
+              <h4>Milk Bar (Bar Mleczny)</h4>
+              <p>Locali popolari, <strong>economici, autentici</strong>. Cerca "bar mleczny" in zona — esperienza pure communist-chic.</p>
+              <span class="f-price">pasto ~25–35 PLN · €6–8 a testa</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== CHECKLIST =================== -->
+<section class="checklist" id="checklist">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-num">// 11</span>
+      <h2 class="section-title">La tua <span class="ac">checklist</span></h2>
+      <span class="section-meta">Pre-partenza + zaino · spunta tutto</span>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="cl-prep" role="tab"><small>★ DA FARE PRIMA</small>Pre-partenza</button>
+      <button class="tab-btn" data-tab="cl-bag" role="tab"><small>★ COSA METTERE</small>In zaino</button>
+    </div>
+
+    <div class="tab-pane active" id="cl-prep">
+
+      <div class="checklist-meta">
+        <div>STATO: <span id="progressLabelPrep">0 / 12 completati</span></div>
+        <div class="progress">
+          <div class="progress-bar"><div class="progress-bar-fill" id="progressFillPrep"></div></div>
+          <button class="reset-btn" data-reset="prep">Reset</button>
+        </div>
+      </div>
+
+      <ul class="todos" id="todoListPrep">
+
+        <li class="todo">
+          <input type="checkbox" id="p1" data-key="p1">
+          <label for="p1"><span class="num">01.</span><span class="cat">DOC</span>Carta d'identità valida per espatrio (o passaporto)
+            <span class="note">→ serve anche al Vodka Museum · scadenza &gt; 21 giu '26</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p2" data-key="p2">
+          <label for="p2"><span class="num">02.</span><span class="cat">DOC</span>Foto del documento sul telefono + copia cartacea
+            <span class="note">→ backup in caso di furto</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p3" data-key="p3">
+          <label for="p3"><span class="num">03.</span><span class="cat">€</span>Scaricare <strong>Revolut</strong> + attivare carta virtuale
+            <span class="note">→ zero commissioni cambio PLN · gratis</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p4" data-key="p4">
+          <label for="p4"><span class="num">04.</span><span class="cat">€</span>Versare <strong>€50 di Cassa Comune</strong> a Davide
+            <span class="note">→ via Revolut prima della partenza</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p5" data-key="p5">
+          <label for="p5"><span class="num">05.</span><span class="cat">APP</span>Scaricare <strong>Uber</strong> + impostare metodo pagamento
+            <span class="note">→ minimo 3 persone del gruppo devono averlo funzionante</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p6" data-key="p6">
+          <label for="p6"><span class="num">06.</span><span class="cat">APP</span>Entrare nel <strong>gruppo WhatsApp</strong> del viaggio
+            <span class="note">→ link da Davide</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p7" data-key="p7">
+          <label for="p7"><span class="num">07.</span><span class="cat">APP</span>Salvare numero di Davide in rubrica
+            <span class="note">→ utile in caso di emergenza/ritardi al volo</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p8" data-key="p8">
+          <label for="p8"><span class="num">08.</span><span class="cat">VOLO</span>Check-in online + scaricare carta d'imbarco
+            <span class="note">→ 24h prima della partenza</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p9" data-key="p9">
+          <label for="p9"><span class="num">09.</span><span class="cat">VOLO</span>Verificare bagaglio incluso nel volo (Wizz/Ryanair sono restrittive)
+            <span class="note">→ misura zaino prima di partire</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p10" data-key="p10">
+          <label for="p10"><span class="num">10.</span><span class="cat">FOOD</span>Comunicare a Davide <strong>intolleranze/allergie</strong>
+            <span class="note">→ vegetariano · celiaco · lattosio · etc.</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p11" data-key="p11">
+          <label for="p11"><span class="num">11.</span><span class="cat">€</span>Tessera Europea di Assicurazione Malattia (TEAM)
+            <span class="note">→ gratis dal sito ASL o sul retro della tessera sanitaria</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="p12" data-key="p12">
+          <label for="p12"><span class="num">12.</span><span class="cat">★</span>Leggere tutta questa pagina almeno una volta
+            <span class="note">→ poi torna quando serve durante il weekend</span>
+          </label>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="tab-pane" id="cl-bag">
+
+      <div class="checklist-meta">
+        <div>STATO: <span id="progressLabelBag">0 / 16 in zaino</span></div>
+        <div class="progress">
+          <div class="progress-bar"><div class="progress-bar-fill" id="progressFillBag"></div></div>
+          <button class="reset-btn" data-reset="bag">Reset</button>
+        </div>
+      </div>
+
+      <ul class="todos" id="todoListBag">
+
+        <li class="todo">
+          <input type="checkbox" id="b1" data-key="b1">
+          <label for="b1"><span class="num">01.</span><span class="cat">DOC</span>Carta d'identità + Tessera sanitaria
+            <span class="note">→ tasca sicura dello zaino, sempre con te</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b2" data-key="b2">
+          <label for="b2"><span class="num">02.</span><span class="cat">DOC</span>Carta di credito/debito + un po' di euro per emergenza
+            <span class="note">→ NO necessità di portare PLN, si paga ovunque con carta</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b3" data-key="b3">
+          <label for="b3"><span class="num">03.</span><span class="cat">TECH</span><strong>Powerbank</strong> carico (almeno 10.000 mAh)
+            <span class="note">→ giornate lunghe + Uber + Google Maps consumano</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b4" data-key="b4">
+          <label for="b4"><span class="num">04.</span><span class="cat">TECH</span>Caricabatterie del telefono + cavo
+            <span class="note">→ NO adattatore: la Polonia ha le stesse prese dell'Italia</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b5" data-key="b5">
+          <label for="b5"><span class="num">05.</span><span class="cat">TECH</span>Cuffie/auricolari (per il volo &amp; tour)
+            <span class="note">→ se prenotiamo le radio per la guida non servono lì</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b6" data-key="b6">
+          <label for="b6"><span class="num">06.</span><span class="cat">FIT</span><strong>Scarpe comode</strong> da camminata (walking tour 4h)
+            <span class="note">→ sneakers già rodate, NIENTE scarpe nuove</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b7" data-key="b7">
+          <label for="b7"><span class="num">07.</span><span class="cat">FIT</span>Scarpe da club (pulite, non sportive)
+            <span class="note">→ alcuni locali fanno selezione all'ingresso</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b8" data-key="b8">
+          <label for="b8"><span class="num">08.</span><span class="cat">FIT</span><strong>Outfit total black</strong> per la serata Moon
+            <span class="note">→ vietati anche loghi colorati · sabato sera</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b9" data-key="b9">
+          <label for="b9"><span class="num">09.</span><span class="cat">FIT</span>Felpa/giacca leggera per la sera (14–17°C dopo cena)
+            <span class="note">→ giugno polacco: caldo di giorno, fresco di sera</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b10" data-key="b10">
+          <label for="b10"><span class="num">10.</span><span class="cat">FIT</span>Giacca antipioggia leggera/k-way
+            <span class="note">→ possibili acquazzoni serali in giugno</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b11" data-key="b11">
+          <label for="b11"><span class="num">11.</span><span class="cat">FIT</span>Occhiali da sole
+            <span class="note">→ tramonto alle 21:15, sole forte di giorno</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b12" data-key="b12">
+          <label for="b12"><span class="num">12.</span><span class="cat">FIT</span>2-3 t-shirt + ricambi · biancheria
+            <span class="note">→ weekend corto, ma sudi se balli</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b13" data-key="b13">
+          <label for="b13"><span class="num">13.</span><span class="cat">VITA</span>Beauty case minimo: spazzolino, dentifricio, deodorante, crema solare
+            <span class="note">→ hotel fornisce sapone/shampoo base</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b14" data-key="b14">
+          <label for="b14"><span class="num">14.</span><span class="cat">VITA</span>Borraccia/bottiglietta riutilizzabile
+            <span class="note">→ acqua del rubinetto a Varsavia è potabile</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b15" data-key="b15">
+          <label for="b15"><span class="num">15.</span><span class="cat">VITA</span>Medicinali essenziali (mal di testa, mal di stomaco, cerotti)
+            <span class="note">→ il giorno dopo Vodka Museum potresti ringraziarti</span>
+          </label>
+        </li>
+
+        <li class="todo">
+          <input type="checkbox" id="b16" data-key="b16">
+          <label for="b16"><span class="num">16.</span><span class="cat">★</span><strong>Energia &amp; voglia di stare in gruppo</strong>
+            <span class="note">→ il vero check-in</span>
+          </label>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="foot-grid">
+
+    <div class="foot-brand">
+      VAR<span class="red">·</span>SAV·IA
+    </div>
+
+    <div class="foot-block">
+      <h5>WeRoad Weekend</h5>
+      <p>Varsavia · Giugno 2026<br>3 giorni · A&amp;O Warsaw Wola<br>11 WeRoaders · coordinatore Davide Janiri</p>
+    </div>
+
+    <div class="foot-block">
+      <h5>Link utili</h5>
+      <ul>
+        <li><a href="https://zagrywki.pl/warszawa/en/" target="_blank" rel="noopener">zagrywki.pl</a></li>
+        <li><a href="https://pvm.pl/en" target="_blank" rel="noopener">Vodka Museum</a></li>
+        <li><a href="https://setkipowodow.pl/" target="_blank" rel="noopener">Setki Powodów (cena Day 2)</a></li>
+        <li><a href="http://podwale25.pl" target="_blank" rel="noopener">podwale25.pl</a></li>
+        <li><a href="https://modlinbus.pl" target="_blank" rel="noopener">modlinbus.pl</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="foot-stamp">
+    <span>★ WeRoad // Travel Diary 2026</span>
+    <span>52°13'N · 21°02'E · POLSKA</span>
+    <span>Made for the group · keep moving</span>
+  </div>
+</footer>
+
+<!-- =================== BOTTOM NAV (mobile) =================== -->
+<nav class="bottom-nav" aria-label="Navigazione rapida">
+  <ul>
+    <li><a href="#programma"><span class="ico">▦</span>Plan</a></li>
+    <li><a href="#voli"><span class="ico">✈</span>Voli</a></li>
+    <li><a href="#mappa"><span class="ico">◉</span>Mappa</a></li>
+    <li><a href="#sos"><span class="ico">☏</span>SOS</a></li>
+    <li><a href="#checklist"><span class="ico">☑</span>Check</a></li>
+  </ul>
+</nav>
+
+<!-- =================== JS =================== -->
+<script>
+/* ---------- NAV / hamburger ---------- */
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  hamburger.classList.remove('open'); navLinks.classList.remove('open');
+}));
+
+/* ---------- COUNTDOWN ---------- */
+const target = new Date('2026-06-19T00:00:00+02:00').getTime();
+const elDays = document.getElementById('cdDays');
+const elHrs  = document.getElementById('cdHours');
+const elMin  = document.getElementById('cdMin');
+const elSec  = document.getElementById('cdSec');
+const elStatus = document.getElementById('cdStatus');
+
+function pad(n){ return String(Math.max(0,n)).padStart(2,'0'); }
+function tickCountdown(){
+  const now = Date.now();
+  let diff = target - now;
+  const isPast = diff < 0;
+  if (isPast) diff = Math.abs(diff);
+
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const s = Math.floor((diff % (1000*60)) / 1000);
+
+  elDays.textContent = pad(d);
+  elHrs.textContent  = pad(h);
+  elMin.textContent  = pad(m);
+  elSec.textContent  = pad(s);
+
+  if (isPast){
+    elStatus.textContent = `★ Weekend concluso · ${d} giorni fa · keep moving`;
+    elStatus.style.background = 'var(--cyan)';
+    elStatus.style.color = 'var(--bg)';
+  } else if (d === 0 && h === 0){
+    elStatus.textContent = '★ It is happening · stay sharp';
+  } else {
+    elStatus.textContent = `T-MINUS ${d}d ${pad(h)}h · departure 19.06.2026`;
+  }
+}
+tickCountdown();
+setInterval(tickCountdown, 1000);
+
+/* ---------- TABS (multiple containers) ---------- */
+document.querySelectorAll('.tabs').forEach(tabs => {
+  const btns = tabs.querySelectorAll('.tab-btn');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const parent = tabs.parentElement;
+      parent.querySelectorAll(':scope > .tab-pane').forEach(p => p.classList.remove('active'));
+      const targetEl = parent.querySelector('#' + target);
+      if (targetEl) targetEl.classList.add('active');
+    });
+  });
+});
+
+/* ---------- CHECKLIST (two lists with separate storage) ---------- */
+function initChecklist(listSelector, fillEl, labelEl, storageKey, totalLabel){
+  const todos = document.querySelectorAll(listSelector + ' input[type="checkbox"]');
+  function load(){
+    let state = {};
+    try { state = JSON.parse(localStorage.getItem(storageKey) || '{}'); } catch(e){}
+    todos.forEach(cb => { if (state[cb.dataset.key]) cb.checked = true; });
+    update();
+  }
+  function save(){
+    const state = {};
+    todos.forEach(cb => { if (cb.checked) state[cb.dataset.key] = true; });
+    try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch(e){}
+  }
+  function update(){
+    const total = todos.length;
+    const done = [...todos].filter(cb => cb.checked).length;
+    fillEl.style.width = (done/total*100) + '%';
+    labelEl.textContent = `${done} / ${total} ${totalLabel}`;
+  }
+  todos.forEach(cb => cb.addEventListener('change', () => { save(); update(); }));
+  return { reset(){ todos.forEach(cb => cb.checked = false); save(); update(); }, load };
+}
+
+const clPrep = initChecklist(
+  '#todoListPrep',
+  document.getElementById('progressFillPrep'),
+  document.getElementById('progressLabelPrep'),
+  'wr_varsavia_prep_v2',
+  'completati'
+);
+const clBag = initChecklist(
+  '#todoListBag',
+  document.getElementById('progressFillBag'),
+  document.getElementById('progressLabelBag'),
+  'wr_varsavia_bag_v2',
+  'in zaino'
+);
+clPrep.load();
+clBag.load();
+
+document.querySelectorAll('.reset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.reset === 'prep') clPrep.reset();
+    if (btn.dataset.reset === 'bag')  clBag.reset();
+  });
+});
+
+/* ---------- MAP — sync hover between pins and legend ---------- */
+const pins = document.querySelectorAll('.map-svg .pin');
+const legs = document.querySelectorAll('.map-legend li');
+function highlight(id, on){
+  pins.forEach(p => { if (p.dataset.pin === id) p.classList.toggle('hot', on); });
+  legs.forEach(l => { if (l.dataset.pin === id) l.classList.toggle('hot', on); });
+}
+pins.forEach(p => {
+  p.addEventListener('mouseenter', () => highlight(p.dataset.pin, true));
+  p.addEventListener('mouseleave', () => {
+    if (p.dataset.pin !== '1') highlight(p.dataset.pin, false);
+  });
+});
+legs.forEach(l => {
+  l.addEventListener('mouseenter', () => highlight(l.dataset.pin, true));
+  l.addEventListener('mouseleave', () => {
+    if (l.dataset.pin !== '1') highlight(l.dataset.pin, false);
+  });
+});
+
+/* ---------- REVEAL on scroll ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- ANCHOR NAV (gestione click esplicita: funziona anche in webview/anteprima) ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    el.scrollIntoView({ behavior: 'auto', block: 'start' });
+  });
+});
+
+/* ---------- SCROLLSPY (top nav + bottom nav) ---------- */
+const spySections = document.querySelectorAll('section[id]');
+const allNavA = document.querySelectorAll('.nav-links a, .bottom-nav a');
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const id = e.target.id;
+    allNavA.forEach(a => {
+      const href = a.getAttribute('href');
+      a.classList.toggle('active', href === '#' + id || (id === 'info' && href === '#sos'));
+    });
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+spySections.forEach(s => spy.observe(s));
+
+/* ---------- AUTO-SELECT del giorno durante il weekend ---------- */
+(function(){
+  const map = { '2026-06-19': 'd1', '2026-06-20': 'd2', '2026-06-21': 'd3' };
+  const n = new Date();
+  const key = n.getFullYear() + '-' + String(n.getMonth()+1).padStart(2,'0') + '-' + String(n.getDate()).padStart(2,'0');
+  if (map[key]){
+    const btn = document.querySelector('.tab-btn[data-tab="' + map[key] + '"]');
+    if (btn) btn.click();
+  }
+})();
+
+/* ---------- FILTRO VOLI per pax ---------- */
+const paxChips = document.querySelectorAll('#paxFilter .chip');
+const flightCards = document.querySelectorAll('.flight-card');
+paxChips.forEach(ch => ch.addEventListener('click', () => {
+  paxChips.forEach(c => c.classList.remove('active'));
+  ch.classList.add('active');
+  const k = ch.dataset.pax;
+  flightCards.forEach(card => {
+    card.classList.remove('dim', 'lit');
+    if (k === 'all') return;
+    const list = (card.dataset.pax || '').split(' ');
+    card.classList.add(list.includes(k) ? 'lit' : 'dim');
+  });
+}));
+
+/* ---------- CONVERTITORE PLN → EUR ---------- */
+const PLN_RATE = 4.27;
+const plnInput = document.getElementById('plnInput');
+const convOut  = document.getElementById('convOut');
+function convertPln(){
+  if (!plnInput || !convOut) return;
+  const v = parseFloat(plnInput.value) || 0;
+  convOut.textContent = '≈ € ' + (v / PLN_RATE).toFixed(2).replace('.', ',');
+}
+if (plnInput){
+  plnInput.addEventListener('input', convertPln);
+  convertPln();
+  document.querySelectorAll('.conv-chip').forEach(c => c.addEventListener('click', () => {
+    plnInput.value = c.dataset.v;
+    convertPln();
+  }));
+}
+
+/* ---------- MAPPA: tap sui pin (touch) ---------- */
+pins.forEach(p => p.addEventListener('click', () => {
+  const turnOn = !p.classList.contains('hot');
+  pins.forEach(x => { if (x.dataset.pin !== '1') highlight(x.dataset.pin, false); });
+  if (p.dataset.pin !== '1') highlight(p.dataset.pin, turnOn);
+}));
+</script>
+
+</body>
+</html>
